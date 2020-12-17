@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
+from argparse import ArgumentParser
 from signal import signal, SIGCHLD
 from subprocess import Popen
-from argparse import ArgumentParser
 
 from utils import log_file_producer
-
 
 parser = ArgumentParser(prog='Dice_Wars')
 parser.add_argument('-b', '--board', help="Seed for generating board", type=int)
@@ -15,6 +14,7 @@ parser.add_argument('-a', '--address', help="Server address", default='127.0.0.1
 parser.add_argument('-l', '--logdir', help="Folder to store last running logs in.")
 parser.add_argument('-d', '--debug', action='store_true')
 parser.add_argument('--ai', help="Specify AI versions as a sequence of ints.", nargs='+')
+parser.add_argument('-c', '--custom', default=False, action='store_true')
 
 procs = []
 
@@ -66,8 +66,10 @@ def main():
         cmd = [
             "./scripts/client.py",
             "-p", str(args.port),
-            "-a", str(args.address),
+            "-a", str(args.address)
         ]
+        if args.custom:
+            cmd.append('-c')
         if args.debug:
             cmd.extend(['--debug', 'DEBUG'])
         procs.append(Popen(cmd, stderr=log_file_producer(args.logdir, 'client-human.log')))
@@ -79,6 +81,8 @@ def main():
                 "-a", str(args.address),
                 "--ai", ai,
             ]
+            if args.custom:
+                cmd.append('-c')
             if args.debug:
                 cmd.extend(['--debug', 'DEBUG'])
 

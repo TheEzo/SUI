@@ -1,13 +1,15 @@
-import hexutil
 import json
-from json.decoder import JSONDecodeError
 import logging
-from PyQt5.QtWidgets import QWidget, QGridLayout, QPushButton, QLabel
-from PyQt5.QtGui import QPainter, QColor, QPolygon, QPen, QBrush, QFont
+import os
+from json.decoder import JSONDecodeError
+
+import hexutil
 from PyQt5.QtCore import QPoint, Qt, QRectF, QTimer
-from random import randint
-from time import sleep
-import sys
+from PyQt5.QtGui import QPainter, QColor, QPolygon, QPen, QFont
+from PyQt5.QtWidgets import QWidget, QGridLayout, QPushButton
+
+from dicewars.ai.xlogin42.phased import FinalAI
+from dicewars.ai.xlogin42.utils import possible_attacks
 
 
 def player_color(player_name):
@@ -261,6 +263,7 @@ class Score(QWidget):
             self.qp.setFont(QFont('Helvetica', 8))
             self.qp.drawText(reserve_rect, Qt.AlignCenter, str(p.get_reserve()))
 
+
 class StatusArea(QWidget):
     """Status area showing current player
     """
@@ -286,13 +289,14 @@ class StatusArea(QWidget):
 class ClientUI(QWidget):
     """Dice Wars' graphical user interface
     """
-    def __init__(self, game):
+    def __init__(self, game, custom=False):
         """
         Parameters
         ----------
         game : Game
         """
         super(ClientUI, self).__init__()
+        self.custom = custom
         self.logger = logging.getLogger('GUI')
         self.game = game
         self.window_name = 'Dice Wars - Player ' + str(self.game.player_name)
@@ -350,7 +354,7 @@ class ClientUI(QWidget):
         """Handle event associated to message from server
         """
         self.game.draw_battle = False
-
+        file = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'learn_data')
         try:
             msg = event
         except JSONDecodeError as e:
@@ -359,6 +363,21 @@ class ClientUI(QWidget):
             exit(1)
 
         if msg['type'] == 'battle':
+            if self.custom and msg['result']['atk']['owner'] != msg['result']['def']['owner'] and \
+                    self.game.current_player == self.game.current_player_name:
+                current = next((a, b) for a, b in possible_attacks(self.game.board, self.game.current_player_name)
+                               if a.name == event['result']['atk']['name'] and b.name == event['result']['def']['name'])
+                ai = FinalAI(self.game.current_player_name, self.game.board, None)
+                to_write = []
+                for move in possible_attacks(self.game.board, self.game.current_player_name):
+                    data = ai.get_nn_vector(self.game.board, move)
+                    choosen = move[0].name == current[0].name and move[1].name == current[1].name
+                    to_write.append(dict(data=data, choosen=choosen, key=f'{current[0].name}_{current[1].name}'))
+
+                with open(file, 'a+') as f:
+                    f.write(json.dumps(to_write))
+                    f.write('\n')
+
             self.game.draw_battle = True
             atk_data = msg['result']['atk']
             def_data = msg['result']['def']
@@ -384,6 +403,9 @@ class ClientUI(QWidget):
             }
 
         elif msg['type'] == 'end_turn':
+            if self.custom and self.game.current_player == self.game.current_player_name:
+                with open(file, 'a+') as f:
+                    f.write('end_turn\n')
             self.logger.debug(msg)
             areas_to_redraw = []
             for area in msg['areas']:

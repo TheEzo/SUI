@@ -1,10 +1,15 @@
 import copy
 import json
-from json.decoder import JSONDecodeError
 import logging
+import os
 import signal
+from json.decoder import JSONDecodeError
 
 from .timers import FischerTimer, FixedTimer
+from ..ai.xlogin42.utils import possible_attacks
+
+
+# from ..ai.xlogin42.phased import FinalAI
 
 
 class TimeoutError(Exception):
@@ -33,7 +38,7 @@ class EndTurnCommand:
 class AIDriver:
     """Basic AI agent implementation
     """
-    def __init__(self, game, ai_constructor):
+    def __init__(self, game, ai_constructor, custom=False):
         """
         Parameters
         ----------
@@ -45,6 +50,7 @@ class AIDriver:
         waitingForResponse : bool
            Indicates whether agent is waiting for a response from the server
         """
+        self.custom = custom
         self.logger = logging.getLogger('AI')
         self.game = game
         self.board = game.board
@@ -70,6 +76,12 @@ class AIDriver:
         self.turns_finished = 0
 
         self.timer = FischerTimer(FISCHER_INIT, FISCHER_INCREMENT)
+        if self.custom:
+            self.written = False
+            pth = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'tmp_logs',
+                               f'ai_{self.game.current_player_name}')
+            if os.path.exists(pth):
+                os.remove(pth)
 
     def run(self):
         """Main AI agent loop
@@ -159,6 +171,23 @@ class AIDriver:
             self.waitingForResponse = False
 
         elif msg['type'] == 'game_end':
+            if self.custom and self.game.current_player_name == int(msg['winner']):
+                print(msg['winner'])
+
+                f1 = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'tmp_logs',
+                                  f'ai_{self.game.current_player_name}')
+                f2 = os.path.join(os.path.dirname(__file__), '..', '..', '..', f'learn_data')
+                from filelock import FileLock
+                if not os.path.exists(f'{f1}.lock'):
+                    with FileLock(f'{f1}.lock'):
+                        with open(f1, 'w') as f:
+                            f.write('won\n')
+                        with open(f1, 'r') as f:
+                            with open(f2, 'a+') as ff:
+                                ff.writelines(f.read())
+                        os.remove(f1)
+                        os.remove(f'{f1}.lock')
+
             self.logger.info("Player {} has won".format(msg['winner']))
             self.game.socket.close()
             return False
@@ -185,6 +214,8 @@ class AIDriver:
         attacker : int
         defender : int
         """
+        file = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'tmp_logs',
+                            f'ai_{self.game.current_player_name}')
         if type == 'battle':
             msg = {
                 'type': 'battle',
@@ -193,7 +224,24 @@ class AIDriver:
             }
             self.logger.debug("Sending battle message {}->{}".format(attacker, defender))
             self.moves_this_turn += 1
+
+            if self.custom:
+                current = next((a, b) for a, b in possible_attacks(self.game.board, self.game.current_player_name)
+                               if a.name == msg['atk'] and b.name == msg['def'])
+                from ..ai.xlogin42.phased import FinalAI
+                ai = FinalAI(self.game.current_player_name, self.game.board, None)
+                to_write = []
+                for move in possible_attacks(self.game.board, self.game.current_player_name):
+                    data = ai.get_nn_vector(self.game.board, move)
+                    choosen = move[0].name == current[0].name and move[1].name == current[1].name
+                    to_write.append(dict(data=data, choosen=choosen, key=f'{current[0].name}_{current[1].name}'))
+
+                with open(file, 'a+') as f:
+                    f.write(json.dumps(to_write))
+                    f.write('\n')
         elif type == 'end_turn':
+            with open(file, 'a+') as f:
+                f.write('end_turn\n')
             msg = {'type': 'end_turn'}
             self.logger.debug("Sending end_turn message.")
             self.moves_this_turn = 0

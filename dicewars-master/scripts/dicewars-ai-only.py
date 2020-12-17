@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 import sys
-from signal import signal, SIGCHLD
 from argparse import ArgumentParser
+from signal import signal, SIGCHLD
 
 from dicewars.server.summary import get_win_rates
 from utils import run_ai_only_game, ListStats, BoardDefinition
-
 
 parser = ArgumentParser(prog='Dice_Wars')
 parser.add_argument('-n', '--nb-games', help="Number of games.", type=int, default=1)
@@ -20,6 +19,7 @@ parser.add_argument('-l', '--logdir', help="Folder to store last running logs in
 parser.add_argument('-d', '--debug', action='store_true')
 parser.add_argument('--ai', help="Specify AI versions as a sequence of ints.", nargs='+')
 parser.add_argument('-r', '--report', help="State the game number on the stdout", action='store_true')
+parser.add_argument('--custom', action='store_true', default=False)
 
 procs = []
 
@@ -64,6 +64,7 @@ def main():
                 client_seed=args.client_seed,
                 logdir=args.logdir,
                 debug=args.debug,
+                custom=args.custom
             )
             summaries.append(game_summary)
         except KeyboardInterrupt:

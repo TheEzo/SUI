@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
-from argparse import ArgumentParser
-import logging
-from PyQt5.QtWidgets import QApplication
-import sys
-import random
-
 import importlib
+import logging
+import random
+import sys
+from argparse import ArgumentParser
 
+from PyQt5.QtWidgets import QApplication
+
+from dicewars.client.ai_driver import AIDriver
 from dicewars.client.game.game import Game
 from dicewars.client.ui import ClientUI
-from dicewars.client.ai_driver import AIDriver
-
 from utils import get_logging_level, get_nickname
 
 
@@ -28,6 +27,7 @@ def main():
     parser.add_argument('-a', '--address', help="Server address", default='127.0.0.1')
     parser.add_argument('-d', '--debug', help="Enable debug output", default='WARN')
     parser.add_argument('-s', '--seed', help="Random seed for a client", type=int)
+    parser.add_argument('-c', '--custom', default=False, action='store_true')
     parser.add_argument('--ai', help="Ai version")
     args = parser.parse_args()
 
@@ -45,11 +45,11 @@ def main():
     game = Game(args.address, args.port, hello_msg)
 
     if args.ai:
-        ai = AIDriver(game, get_ai_constructor(args.ai))
+        ai = AIDriver(game, get_ai_constructor(args.ai), args.custom)
         ai.run()
     else:
         app = QApplication(sys.argv)
-        ui = ClientUI(game)
+        ui = ClientUI(game, args.custom)
         sys.exit(app.exec_())
 
 

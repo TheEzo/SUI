@@ -1,25 +1,13 @@
-import logging
-import numpy
-import pickle
-import random
-import os
-import numpy as np
-import dicewars.client.game.board
-import dicewars.client.game.area
-from dicewars.client.game.board import Board
 from typing import Iterator, Tuple
-import collections
 
-from dicewars.client.ai_driver import BattleCommand, EndTurnCommand
-
+from dicewars.client.game.board import Board
 
 
 def attacker_advantage(attacker, defender):
     return attacker.get_dice() - defender.get_dice()
 
 
-
-def get_largest_region( player_name, board):
+def get_largest_region(player_name, board):
     largest_region = []
 
     players_regions = board.get_players_regions(player_name)
@@ -35,22 +23,23 @@ def get_largest_region( player_name, board):
     return largest_region
 
 
-def is_in_largest_region( area, board):
-    owner  = area.get_owner_name()
+def is_in_largest_region(area, board):
+    owner = area.get_owner_name()
     largest_region = get_largest_region(owner, board)
     if area.get_name() in largest_region:
         return 1
     else:
         return 0
 
+
 def get_regio_occupancy(area, board):
-    region = board.get_areas_region(area.get_name(),board.areas)
+    region = board.get_areas_region(area.get_name(), board.areas)
     regio_size = len(region)
     max_dice_count = 8 * regio_size
     dice_count = 0
     for ar in region:
         dice_count = dice_count + board.get_area(ar).get_dice()
-    return dice_count/max_dice_count
+    return dice_count / max_dice_count
 
 
 def get_dice_proportion(player_name, board):
@@ -59,7 +48,8 @@ def get_dice_proportion(player_name, board):
     player_names = set(area.get_owner_name() for area in board.areas.values())
     for pl in player_names:
         dices_on_board = dices_on_board + board.get_player_dice(pl)
-    return player_dices/dices_on_board
+    return player_dices / dices_on_board
+
 
 def get_area_proportion(player_name, board):
     areas_on_board = 0
@@ -67,8 +57,7 @@ def get_area_proportion(player_name, board):
     player_names = set(area.get_owner_name() for area in board.areas.values())
     for pl in player_names:
         areas_on_board = areas_on_board + len(board.get_player_areas(pl))
-    return player_areas/areas_on_board
-
+    return player_areas / areas_on_board
 
 
 def probability_of_successful_attack(board, atk_area, target_area):
@@ -153,6 +142,7 @@ def attack_succcess_probability(atk, df):
         },
     }[atk][df]
 
+
 def possible_attacks(board: Board, player_name: int) -> Iterator[Tuple[int, int]]:
     for area in board.get_player_border(player_name):
         if not area.can_attack():
@@ -184,5 +174,5 @@ def get_score_by_player(player_name, board, skip_area=None):
 
 def get_dice_space(player_name, board):
     player_dices = board.get_player_dice(player_name)
-    player_dice_capacity =  len(board.get_player_areas(player_name)) * 8
+    player_dice_capacity = len(board.get_player_areas(player_name)) * 8
     return player_dice_capacity - player_dices

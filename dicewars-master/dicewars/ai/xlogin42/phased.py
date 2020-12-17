@@ -1,10 +1,7 @@
 import logging
-import random
-
-from .utils import *
 
 from dicewars.client.ai_driver import BattleCommand, EndTurnCommand
-
+from .utils import *
 
 
 class FinalAI:
@@ -21,51 +18,49 @@ class FinalAI:
         self.turn_id = 0
         self.reserve = 0
 
-
     def ai_turn(self, board, nb_moves_this_turn, nb_turns_this_game, time_left):
         """AI agent's turn
         """
-        #tady nekde volani A* nebo cehosi podobnyho
+        # tady nekde volani A* nebo cehosi podobnyho
         self.turn_id = self.turn_id + 1
-        self.logger.debug("Turn " + str(self.turn_id) + " begin...." )
+        self.logger.debug("Turn " + str(self.turn_id) + " begin....")
         fake_iterator = 3
-        #nekonecnej cyklus s NN
-        while fake_iterator > 0: #tady bude nekonecnej cyklus .. prozatim cyklim trikrat
+        # nekonecnej cyklus s NN
+        while fake_iterator > 0:  # tady bude nekonecnej cyklus .. prozatim cyklim trikrat
             fake_iterator = fake_iterator - 1
-            
+
             all_evaluated_moves = []
             all_moves = list(possible_attacks(board, self.player_name))
-            if len(all_moves) == 0 :
+            if len(all_moves) == 0:
                 return self.end_turn_command_and_reserv_calculation(board)
             fake_value = 0.7
             for move in all_moves:
-                #fejkovani NN tady casem bude nejakej eval prostrednictvim NN
+                # fejkovani NN tady casem bude nejakej eval prostrednictvim NN
                 fake_value_for_atack = fake_value - 0.1
-                
-                #ziskani vektoru pro NN
+
+                # ziskani vektoru pro NN
                 nn_input_vec = self.get_nn_vector(board, move)
 
-                #vyhodnoceni hodnoty
-                #attack_value = neuronka(nn_input_vec)
+                # vyhodnoceni hodnoty
+                # attack_value = neuronka(nn_input_vec)
 
                 all_evaluated_moves.append((move[0], move[1], fake_value))
 
             all_evaluated_moves.sort(key=lambda tup: tup[2])
 
-            if all_evaluated_moves[0][2] > 0.5: #xperimentalni hranice .. uvidi se podle NN
-                #attack
+            if all_evaluated_moves[0][2] > 0.5:  # xperimentalni hranice .. uvidi se podle NN
+                # attack
                 self.logger.debug("Attacking")
                 return BattleCommand(all_evaluated_moves[0][0].get_name(), all_evaluated_moves[0][1].get_name())
             else:
-                #end of turn
+                # end of turn
                 self.logger.debug("Nothing to do")
                 return self.end_turn_command_and_reserv_calculation(board)
 
-        
-        #tady nebude az se dodela nekonecnej cyklus
+        # tady nebude az se dodela nekonecnej cyklus
         return self.end_turn_command_and_reserv_calculation(board)
 
-    def end_turn_command_and_reserv_calculation(self,board):
+    def end_turn_command_and_reserv_calculation(self, board):
         score = get_score_by_player(self.player_name, board)
         capacity = get_dice_space(self.player_name, board)
         capacity_after_score_added = capacity - score
@@ -80,13 +75,10 @@ class FinalAI:
         if self.reserve < 0:
             self.reserve = 0
 
-        if self.reserve > 64: #e rezerva 62?
+        if self.reserve > 64:  # e rezerva 62?
             self.reserve = 62
 
         return EndTurnCommand()
-
-
-
 
     # Vstupy NN
     # % velikost rezervy                                
@@ -98,10 +90,9 @@ class FinalAI:
     # zaplneni oblasti obrany                           mame
     # zaplneni oblasti protivnika                       mame
 
-
-    def get_nn_vector(self, board, move):
+    def get_nn_vector(self, board, move) -> list:
         defender_name = move[1].get_owner_name()
-        
+
         successful_atack_p = probability_of_successful_attack(board, move[0].get_name(), move[1].get_name())
         self.logger.debug("Attack prob: " + str(successful_atack_p))
 
@@ -132,9 +123,7 @@ class FinalAI:
         reserve = self.reserve
         self.logger.debug("Reserve: " + str(reserve))
 
-        #vrat si co budes potrebovat
-        return True
-
-
-
-
+        # vrat si co budes potrebovat
+        return [successful_atack_p, attacker_max_regio_flag, defender_max_regio_flag, attacker_region_occupancy,
+                defender_region_occupancy, attacker_dice_proportion, defender_dice_proportion, attacker_area_proportion,
+                defender_area_proportion, reserve]

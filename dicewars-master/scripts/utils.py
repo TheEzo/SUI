@@ -1,9 +1,10 @@
 import os
-import sys
-from subprocess import Popen
-import tempfile
-import numpy as np
 import random
+import sys
+import tempfile
+from subprocess import Popen
+
+import numpy as np
 
 from dicewars.server.summary import GameSummary
 
@@ -66,7 +67,7 @@ def log_file_producer(logdir, process):
 def run_ai_only_game(
         port, address, process_list, ais,
         board_definition=None, fixed=None, client_seed=None,
-        logdir=None, debug=False):
+        logdir=None, debug=False, custom=False):
     logs = []
     process_list.clear()
 
@@ -99,6 +100,8 @@ def run_ai_only_game(
             "-a", str(address),
             "--ai", str(ai_version),
         ]
+        if custom:
+            client_cmd.append('-c')
         if client_seed is not None:
             client_cmd.extend(['-s', str(client_seed)])
         if debug:
