@@ -155,24 +155,32 @@ def possible_attacks(board: Board, player_name: int) -> Iterator[Tuple[int, int]
 
 
 def get_score_by_player(player_name, board, skip_area=None):
-    """Get score of a player
-    Parameters
-    ----------
-    player_name : int
-    skip_area : int
-        Name of an area to be excluded from the calculation
-    Returns
-    -------
-    int
-        score of the player
-    """
     players_regions = board.get_players_regions(player_name, skip_area=skip_area)
     max_region_size = max(len(region) for region in players_regions)
 
     return max_region_size
 
 
+def score_after_move(player_name, board, attacked_area):
+    score_before_attack = get_score_by_player(player_name, board)
+    score_after_attack = get_score_by_player(player_name, board, attacked_area)
+
+    return score_after_attack/score_before_attack
+
+
 def get_dice_space(player_name, board):
     player_dices = board.get_player_dice(player_name)
     player_dice_capacity = len(board.get_player_areas(player_name)) * 8
     return player_dice_capacity - player_dices
+
+def count_of_adjacen(area, board, player_name):
+    a = board.get_area(area)
+    neighbours_indexes = a.get_adjacent_areas()
+    to_return = 0
+    for i in neighbours_indexes:
+        b = board.get_area(i)
+        n = b.get_owner_name()
+        if n != player_name:
+            to_return = to_return + 1
+
+    return to_return

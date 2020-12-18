@@ -93,35 +93,48 @@ class FinalAI:
     def get_nn_vector(self, board, move) -> list:
         defender_name = move[1].get_owner_name()
 
+        #pravdepodobnost dobyti
         successful_atack_p = probability_of_successful_attack(board, move[0].get_name(), move[1].get_name())
         self.logger.debug("Attack prob: " + str(successful_atack_p))
 
+        #utok/obrana z nejvetsiho
         attacker_max_regio_flag = is_in_largest_region(move[0], board)
         self.logger.debug("Attacker max regio flag: " + str(attacker_max_regio_flag))
 
         defender_max_regio_flag = is_in_largest_region(move[1], board)
         self.logger.debug("Defender max regio flag: " + str(defender_max_regio_flag))
 
+        # hustota zaplneni kostkama napadeneho pole
         attacker_region_occupancy = get_regio_occupancy(move[0], board)
         self.logger.debug("Attacker regio occupancy: " + str(attacker_region_occupancy))
 
         defender_region_occupancy = get_regio_occupancy(move[1], board)
         self.logger.debug("Defender regio occupancy: " + str(defender_region_occupancy))
 
+        # pocet kostek playera ku kostkam na boardu
         attacker_dice_proportion = get_dice_proportion(self.player_name, board)
         self.logger.debug("Attacker dice proportion: " + str(attacker_dice_proportion))
 
         defender_dice_proportion = get_dice_proportion(defender_name, board)
         self.logger.debug("Defender dice proportion: " + str(defender_dice_proportion))
 
+        # pocet poli playera ku poctu poli na boardu
         attacker_area_proportion = get_area_proportion(self.player_name, board)
         self.logger.debug("Attacker area proportion: " + str(attacker_area_proportion))
 
         defender_area_proportion = get_area_proportion(defender_name, board)
         self.logger.debug("Defender area proportion: " + str(defender_area_proportion))
 
+        # rezerva
         reserve = self.reserve
         self.logger.debug("Reserve: " + str(reserve))
+
+        # skore v procentech po provedeni utoku
+        enemy_score = score_after_move(defender_name, board, move[1].get_name())
+        self.logger.debug("Enemy score after attack: " + str(enemy_score))
+
+        count_of_enemy_neighbours = count_of_adjacen(move[0].get_name(), board, self.player_name)
+        self.logger.debug("sousedi : " + str(count_of_enemy_neighbours))
 
         # vrat si co budes potrebovat
         return [successful_atack_p, attacker_max_regio_flag, defender_max_regio_flag, attacker_region_occupancy,

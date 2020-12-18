@@ -6,7 +6,6 @@ import signal
 from json.decoder import JSONDecodeError
 
 from .timers import FischerTimer, FixedTimer
-from ..ai.xlogin42.utils import possible_attacks
 
 
 # from ..ai.xlogin42.phased import FinalAI
@@ -226,6 +225,7 @@ class AIDriver:
             self.moves_this_turn += 1
 
             if self.custom:
+                from ..ai.xlogin42.utils import possible_attacks
                 current = next((a, b) for a, b in possible_attacks(self.game.board, self.game.current_player_name)
                                if a.name == msg['atk'] and b.name == msg['def'])
                 from ..ai.xlogin42.phased import FinalAI
