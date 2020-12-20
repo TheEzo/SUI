@@ -363,8 +363,7 @@ class ClientUI(QWidget):
             exit(1)
 
         if msg['type'] == 'battle':
-            if self.custom and msg['result']['atk']['owner'] != msg['result']['def']['owner'] and \
-                    self.game.current_player == self.game.current_player_name:
+            if self.custom:
                 current = next((a, b) for a, b in possible_attacks(self.game.board, self.game.current_player_name)
                                if a.name == event['result']['atk']['name'] and b.name == event['result']['def']['name'])
                 ai = FinalAI(self.game.current_player_name, self.game.board, None)
@@ -372,7 +371,7 @@ class ClientUI(QWidget):
                 for move in possible_attacks(self.game.board, self.game.current_player_name):
                     data = ai.get_nn_vector(self.game.board, move)
                     choosen = move[0].name == current[0].name and move[1].name == current[1].name
-                    to_write.append(dict(data=data, choosen=choosen, key=f'{current[0].name}_{current[1].name}'))
+                    to_write.append(dict(data=data, choosen=choosen, key=f'{move[0].name}_{move[1].name}'))
 
                 with open(file, 'a+') as f:
                     f.write(json.dumps(to_write))
@@ -403,7 +402,7 @@ class ClientUI(QWidget):
             }
 
         elif msg['type'] == 'end_turn':
-            if self.custom and self.game.current_player == self.game.current_player_name:
+            if self.custom:
                 with open(file, 'a+') as f:
                     f.write('end_turn\n')
             self.logger.debug(msg)

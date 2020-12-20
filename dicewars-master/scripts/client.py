@@ -2,9 +2,9 @@
 import importlib
 import logging
 import random
-import sys
 from argparse import ArgumentParser
 
+import sys
 from PyQt5.QtWidgets import QApplication
 
 from dicewars.client.ai_driver import AIDriver
@@ -45,7 +45,7 @@ def main():
     game = Game(args.address, args.port, hello_msg)
 
     if args.ai:
-        ai = AIDriver(game, get_ai_constructor(args.ai), args.custom)
+        ai = AIDriver(game, get_ai_constructor(args.ai))
         ai.run()
     else:
         app = QApplication(sys.argv)

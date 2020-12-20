@@ -139,4 +139,4 @@ class FinalAI:
         # vrat si co budes potrebovat
         return [successful_atack_p, attacker_max_regio_flag, defender_max_regio_flag, attacker_region_occupancy,
                 defender_region_occupancy, attacker_dice_proportion, defender_dice_proportion, attacker_area_proportion,
-                defender_area_proportion, reserve]
+                defender_area_proportion, reserve, enemy_score, count_of_enemy_neighbours]
