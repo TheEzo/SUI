@@ -11,71 +11,115 @@ def hash_list(value):
 
 def run():
     added = set()
-    with open(os.path.join(os.path.dirname(__file__), 'train'), 'w') as r:
-        with open(os.path.join(os.path.dirname(__file__), 'collected'), 'r') as f:
-            data = f.read()
-        r.write('[\n')
-        for d in data.split('\n'):
-            if d == 'end_turn' or not d:
-                continue
-            record = json.loads(d)
-            for item in record:
-                hash_ = hash_list(item['data'][:-1])
-                if hash_ not in added:
-                    added.add(hash_)
+    train_data = []
 
-                    evaluated = eval(item['data'])
-                    w = dict(data=item['data'][:11], res=evaluated)
-                    r.write(json.dumps(w))
-                    r.write(',\n')
-        r.write(']\n')
+    with open(os.path.join(os.path.dirname(__file__), 'collected'), 'r') as f:
+        data = f.read()
+    for d in data.split('\n'):
+
+        if d == 'end_turn' or not d:
+            continue
+        record = json.loads(d)
+        for item in record:
+
+            # if not item['choosen']:
+            #     continue
+
+            hash_ = hash_list(item['data'][:-1])
+            if hash_ not in added:
+                added.add(hash_)
+
+                vector = [item['data'][0], item['data'][1], item['data'][2], item['data'][3],
+                          item['data'][4], item['data'][9], item['data'][10]]
+
+                # bez flagu
+                vector = [item['data'][0], item['data'][3],
+                          item['data'][4], item['data'][9], item['data'][10]]
+                # vector = item['data'][:11]
+                evaluated = eval(vector)
+                while item['choosen'] and evaluated < 0.5 and item['data'][0] > 0.49:
+                    evaluated += 0.1
+                w = dict(data=vector, res=evaluated)
+                train_data.append(w)
+
+    results = [d['res'] for d in train_data]
+    results = normalize(results)
+
+    updated = False
+    with open(os.path.join(os.path.dirname(__file__), 'train'), 'w') as r:
+        r.write('[\n\t')
+        for i, item in enumerate(train_data):
+            if updated:
+                r.write(',\n\t')
+            w = dict(data=item['data'], res=results[i])
+            r.write(json.dumps(w))
+            updated = True
+        r.write('\n]\n')
+
+
+def normalize(data):
+    low = min(data)
+    high = max(data) - low
+    return [(r - low) / high for r in data]
 
 
 def eval(vector):
     res = 0.
-    res += vector[0] * 0.34  # successful_atack_p
 
-    res += vector[1] * 0.015  # attacker_max_regio_flag
-    res += vector[2] * 0.015  # defender_max_regio_flag
+    # bez flagu
+    for i, item in enumerate(vector):
+        if i == 0:
+            res += item * 1
+        elif i == 1:
+            res += item * -0.8
+        elif i == 2:
+            res += item * 0.75
+        elif i == 3:
+            res += item * 0.8
+        elif i == 4:
+            res += item * 0.7
+    return res
 
-    if vector[3] > vector[4]:
-        res += vector[3] * 0.24  # attacker_region_occupancy
-        res += vector[4] * 0.04  # defender_region_occupancy
-    else:
-        res += vector[3] * 0.09  # attacker_region_occupancy
-        res += vector[4] * 0.19  # defender_region_occupancy
+    for i, item in enumerate(vector):
+        if i == 0:
+            res += item * 1
+        elif i == 1:
+            res += item * 0.6
+        elif i == 2:
+            res += item * 0.8
+        elif i == 3:
+            res += item * -0.8
+        elif i == 4:
+            res += item * 0.75
+        elif i == 5:
+            res += item * 0.8
+        elif i == 6:
+            res += item * 0.7
+    return res
 
-    res += vector[5] * 0.015  # attacker_dice_proportion
-    res += vector[6] * 0.015  # defender_dice_proportion
-
-    if vector[7] > vector[8]:
-        res += vector[7] * 0.09  # attacker_dice_proportion
-        res += vector[8] * 0.09  # defender_dice_proportion
-    else:
-        res += vector[7] * 0.075  # attacker_dice_proportion
-        res += vector[8] * 0.105  # defender_dice_proportion
-
-    res += vector[9] * 0.04  # reserve
-    res += vector[10] * 0.1  # enemy_score
-
-    # res += vector[0] * 0.35  # successful_atack_p  350
-    #
-    # res += vector[1] * 0.1  # attacker_max_regio_flag  100
-    # res += vector[2] * 0.05  # defender_max_regio_flag  50
-    #
-    # res += vector[3] * 0.15  # attacker_region_occupancy  150
-    # res += vector[4] * 0.15  # defender_region_occupancy  150
-    #
-    # res += vector[5] * 0.05  # attacker_dice_proportion  50
-    # res += vector[6] * 0.05  # defender_dice_proportion  50
-    #
-    # res += vector[7] * 0.05  # attacker_dice_proportion  50
-    # res += vector[8] * 0.05  # defender_dice_proportion  50
-    #
-    # res += vector[9] * 0.2  # reserve  200
-    # res += vector[10] * 0.1  # enemy_score  100
-    # res /= 1.3
-
+    for i, item in enumerate(vector):
+        if i == 0:
+            res += item * 1       # successful_atack_p
+        elif i == 1:
+            res += item * 0.6     # attacker_max_regio_flag
+        elif i == 2:
+            res += item * 0.8     # defender_max_regio_flag
+        elif i == 3:
+            res += item * 0.8    # attacker_region_occupancy
+        elif i == 4:
+            res += item * -0.8    # defender_region_occupancy
+        elif i == 5:
+            res += item * 0.7     # attacker_dice_proportion
+        elif i == 6:
+            res += item * -0.7     # defender_dice_proportion
+        elif i == 7:
+            res += item * 0.7       # attacker_area_proportion
+        elif i == 8:
+            res += item * -0.6       # defender_area_proportion
+        elif i == 9:
+            res += item * 0.9       # reserve
+        elif i == 10:
+            res += item * 0.7       # enemy_score
     return res
 
 
