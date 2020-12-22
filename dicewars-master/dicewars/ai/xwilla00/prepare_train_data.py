@@ -21,23 +21,18 @@ def run():
             continue
         record = json.loads(d)
         for item in record:
+            # vector = [item['data'][0], item['data'][1], item['data'][2], item['data'][3],
+            #           item['data'][4], item['data'][9], item['data'][10]]
+            # bez flagu
+            # vector = [item['data'][0], item['data'][3], item['data'][4], item['data'][9], item['data'][10]]
+            vector = item['data']
 
-            # if not item['choosen']:
-            #     continue
-
-            hash_ = hash_list(item['data'][:-1])
+            hash_ = hash_list(vector)
             if hash_ not in added:
                 added.add(hash_)
 
-                vector = [item['data'][0], item['data'][1], item['data'][2], item['data'][3],
-                          item['data'][4], item['data'][9], item['data'][10]]
-
-                # bez flagu
-                vector = [item['data'][0], item['data'][3],
-                          item['data'][4], item['data'][9], item['data'][10]]
-                # vector = item['data'][:11]
                 evaluated = eval(vector)
-                while item['choosen'] and evaluated < 0.5 and item['data'][0] > 0.49:
+                if item['choosen'] and evaluated < 0.5 and vector[0] > 0.49:
                     evaluated += 0.1
                 w = dict(data=vector, res=evaluated)
                 train_data.append(w)
@@ -67,35 +62,35 @@ def eval(vector):
     res = 0.
 
     # bez flagu
-    for i, item in enumerate(vector):
-        if i == 0:
-            res += item * 1
-        elif i == 1:
-            res += item * -0.8
-        elif i == 2:
-            res += item * 0.75
-        elif i == 3:
-            res += item * 0.8
-        elif i == 4:
-            res += item * 0.7
-    return res
-
-    for i, item in enumerate(vector):
-        if i == 0:
-            res += item * 1
-        elif i == 1:
-            res += item * 0.6
-        elif i == 2:
-            res += item * 0.8
-        elif i == 3:
-            res += item * -0.8
-        elif i == 4:
-            res += item * 0.75
-        elif i == 5:
-            res += item * 0.8
-        elif i == 6:
-            res += item * 0.7
-    return res
+    # for i, item in enumerate(vector):
+    #     if i == 0:
+    #         res += item * 1
+    #     elif i == 1:
+    #         res += item * 0.8
+    #     elif i == 2:
+    #         res += item * -0.75
+    #     elif i == 3:
+    #         res += item * 0.8
+    #     elif i == 4:
+    #         res += item * 0.7
+    # return res
+    #
+    # for i, item in enumerate(vector):
+    #     if i == 0:
+    #         res += item * 1
+    #     elif i == 1:
+    #         res += item * 0.6
+    #     elif i == 2:
+    #         res += item * 0.8
+    #     elif i == 3:
+    #         res += item * -0.8
+    #     elif i == 4:
+    #         res += item * 0.75
+    #     elif i == 5:
+    #         res += item * 0.8
+    #     elif i == 6:
+    #         res += item * 0.7
+    # return res
 
     for i, item in enumerate(vector):
         if i == 0:
@@ -109,17 +104,20 @@ def eval(vector):
         elif i == 4:
             res += item * -0.8    # defender_region_occupancy
         elif i == 5:
-            res += item * 0.7     # attacker_dice_proportion
+            res += item * 0.6     # attacker_dice_proportion
         elif i == 6:
-            res += item * -0.7     # defender_dice_proportion
+            res += item * -0.6     # defender_dice_proportion
         elif i == 7:
-            res += item * 0.7       # attacker_area_proportion
+            res += item * 0.5       # attacker_area_proportion
         elif i == 8:
-            res += item * -0.6       # defender_area_proportion
+            res += item * -0.5       # defender_area_proportion
         elif i == 9:
             res += item * 0.9       # reserve
         elif i == 10:
             res += item * 0.7       # enemy_score
+        elif i == 11:
+            val = 1 if item else 0
+            res += val * 0.6
     return res
 
 
