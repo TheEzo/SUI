@@ -10,15 +10,15 @@ class NN:
     def __init__(self, train=False):
         self.model = keras.Sequential()
 
-        self.epochs = 100
+        self.epochs = 50
         learning_rate = 0.01
         decay_rate = learning_rate / (self.epochs + 10)
 
         self.path = os.path.join(os.path.dirname(__file__), 'nn.h5')
         if train:
-            self.model.add(keras.layers.Dense(64, input_dim=12, activation='relu'))
-            self.model.add(keras.layers.Dense(16, activation='relu'))
-            self.model.add(keras.layers.Dense(10, activation='relu'))
+            self.model.add(keras.layers.Dense(32, input_dim=12, activation='relu'))
+            self.model.add(keras.layers.Dense(12, activation='relu'))
+            # self.model.add(keras.layers.Dense(10, activation='relu'))
             # self.model.add(keras.layers.Dense(4, activation='relu'))
             self.model.add(keras.layers.Dense(1, activation='sigmoid'))
 
@@ -28,7 +28,7 @@ class NN:
             self.model = keras.models.load_model(self.path)
 
     def train(self, x, y):
-        self.model.fit(np.array(x), np.array(y), epochs=self.epochs, batch_size=6000)
+        self.model.fit(np.array(x), np.array(y), epochs=self.epochs, batch_size=600)
         self.model.save(self.path)
 
     def accuracy(self, y_true, y_pred):
