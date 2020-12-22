@@ -10,7 +10,7 @@ class NN:
     def __init__(self, train=False):
         self.model = keras.Sequential()
 
-        self.epochs = 200
+        self.epochs = 100
         learning_rate = 0.01
         decay_rate = learning_rate / (self.epochs + 10)
 
