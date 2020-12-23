@@ -174,6 +174,16 @@ def get_dice_space(player_name, board):
     player_dice_capacity = len(board.get_player_areas(player_name)) * 8
     return player_dice_capacity - player_dices
 
+def max_count_of_adjacen(board):
+    count = 1
+
+    for area in board.areas.values():
+        adjacent_areas_count = len(area.get_adjacent_areas())
+
+        if adjacent_areas_count > count:
+            count = adjacent_areas_count
+
+    return count
 
 def count_of_adjacen(area, board, player_name):
     a = board.get_area(area)

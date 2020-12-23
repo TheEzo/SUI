@@ -1,2 +1,2 @@
-source ../venv-sui/bin/activate
+source ../env-sui/bin/activate
 export PYTHONPATH=$PWD:$PYTHONPATH

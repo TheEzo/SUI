@@ -3,7 +3,7 @@ import logging
 from dicewars.client.ai_driver import BattleCommand, EndTurnCommand
 from .nn import NN
 from .utils import *
-
+import time
 
 class FinalAI:
 
@@ -20,49 +20,100 @@ class FinalAI:
         self.reserve = 0
         self.nn = NN()
         self.t = 0
+        self.adjacent_areas_max = max_count_of_adjacen(board)
+        self.attacked = None
+
+        self.won = 0
 
     def ai_turn(self, board, nb_moves_this_turn, nb_turns_this_game, time_left):
         """AI agent's turn
         """
+        start_turn = time.time()
+       
+        #if self.attacked is not None:
+            #new_owner = board.areas[str(self.attacked)].get_owner_name()
 
-        # tady nekde volani A* nebo cehosi podobnyho
-        self.turn_id = self.turn_id + 1
-        self.logger.debug("Turn " + str(self.turn_id) + " begin....")
+            # if new_owner == self.player_name:
+            #    self.logger.debug("Attack successful")
+            #    self.won += 0.04
+            #else:
+            #    self.logger.debug("Attack not successful")
+            #    self.won -= 0.06
+            #
+            #    if self.won < 0:
+            #        self.won = 0
+                    
+            #self.attacked = None
 
-        all_evaluated_moves = []
-        all_moves = list(possible_attacks(board, self.player_name))
-        if len(all_moves) == 0:
-            return self.end_turn_command_and_reserv_calculation(board)
+        try:
+            # tady nekde volani A* nebo cehosi podobnyho
+            self.turn_id = self.turn_id + 1
+            self.logger.debug("Turn " + str(self.turn_id) + " begin....")
 
-        for move in all_moves:
-            # ziskani vektoru pro NN
-            nn_input_vec = self.get_nn_vector(board, move)
+            all_evaluated_moves = []
+            all_moves = list(possible_attacks(board, self.player_name))
+            
+            if len(all_moves) == 0:
+                return self.end_turn_command_and_reserv_calculation(board)
 
-            # vyhodnoceni hodnoty
-            attack_value = self.nn.eval(nn_input_vec)
+            if time_left < 0.3 or time_left / 0.05 < len(all_moves):
+                return self.end_turn_command_and_reserv_calculation(board)
 
-            all_evaluated_moves.append((move[0], move[1], attack_value))
+            moves_time_start = time.time()
 
-        # self.logger.debug(all_evaluated_moves[0][2])
-        maximum = max(m[2] for m in all_evaluated_moves)
-        best_move = next(m for m in all_evaluated_moves if m[2] == maximum)
-        all_evaluated_moves.sort(key=lambda tup: tup[2])
+            all_moves.sort(key=lambda tup: (tup[0].get_dice() * tup[0].get_dice()) - tup[1].get_dice(), reverse=True)
+            
+            if self.t > 5:
+                return self.end_turn_command_and_reserv_calculation(board)
+                for move in all_moves:
+                    nn_input_vec = self.get_nn_vector(board, move)
+                    attack_value = self.nn.eval(nn_input_vec)[0][0]
 
-        self.logger.debug(f'evaluated: {best_move[2]}')
-        if best_move[2] > 0.2 and self.t < 3:
-            # attack
-            self.logger.debug("Attacking")
-            self.t += 1
-            return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
-        elif best_move[2] > 0.4:  # xperimentalni hranice .. uvidi se podle NN
-            # attack
-            self.logger.debug("Attacking")
-            self.t += 1
-            return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
-        else:
-            # end of turn
+                    self.logger.debug(f"nn_input_vec: {nn_input_vec}")
+                    self.logger.debug(f"attack_value: {attack_value}")
+
+                    if attack_value > 0.65: # 0.65
+                        self.logger.debug(f"Attacking: {self.t}, {attack_value}")
+                        self.attacked = move[1].get_name()
+                        return BattleCommand(move[0].get_name(), move[1].get_name())
+
+                return self.end_turn_command_and_reserv_calculation(board)   
+            else:
+                for move in all_moves:
+                    nn_input_vec = self.get_nn_vector(board, move)
+                    attack_value = self.nn.eval(nn_input_vec)[0][0]
+
+                    self.logger.debug(f"nn_input_vec: {nn_input_vec}")
+                    self.logger.debug(f"attack_value: {attack_value}")
+
+                    if attack_value > 0.75:
+                        self.logger.debug(f"Attacking: {self.t}, {attack_value}")
+                        self.attacked = move[1].get_name()
+                        return BattleCommand(move[0].get_name(), move[1].get_name())
+
+                    all_evaluated_moves.append((move[0], move[1], attack_value))
+            
+            moves_time_end = time.time()
+            self.logger.debug(f"moves_time: {moves_time_end - moves_time_start}")
+
+            maximum = max(m[2] for m in all_evaluated_moves)
+            best_move = next(m for m in all_evaluated_moves if m[2] == maximum)
+            all_evaluated_moves.sort(key=lambda tup: tup[2])
+
+            self.logger.debug(f'evaluated: {best_move[2]}')
+            
+            if (self.t > 1 and best_move[2] > (0.56 - self.won)) or (best_move[2] > (0.53 - self.won)):
+                self.logger.debug(f"Attacking: {self.t}, {best_move[2]}")
+                self.attacked = best_move[1].get_name()
+                self.t += 1
+                return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
+            
             self.logger.debug("Nothing to do")
             return self.end_turn_command_and_reserv_calculation(board)
+            
+        finally:
+            end_turn = time.time()
+            self.logger.debug(f"end turn: {end_turn - start_turn}")
 
     def end_turn_command_and_reserv_calculation(self, board):
         score = get_score_by_player(self.player_name, board)
@@ -81,6 +132,8 @@ class FinalAI:
 
         if self.reserve > 64:  # e rezerva 62?
             self.reserve = 62
+
+        self.t = 0
 
         return EndTurnCommand()
 
@@ -141,6 +194,10 @@ class FinalAI:
         # self.logger.debug("sousedi : " + str(count_of_enemy_neighbours))
 
         # vrat si co budes potrebovat
+        # return [successful_atack_p, attacker_max_regio_flag, defender_max_regio_flag, attacker_region_occupancy,
+        #        defender_region_occupancy, attacker_dice_proportion, defender_dice_proportion, attacker_area_proportion,
+        #        defender_area_proportion, reserve, enemy_score, count_of_enemy_neighbours / self.adjacent_areas_max]
+
         return [successful_atack_p, attacker_max_regio_flag, defender_max_regio_flag, attacker_region_occupancy,
                 defender_region_occupancy, attacker_dice_proportion, defender_dice_proportion, attacker_area_proportion,
-                defender_area_proportion, reserve, enemy_score, count_of_enemy_neighbours]
+                defender_area_proportion, enemy_score, count_of_enemy_neighbours / self.adjacent_areas_max]

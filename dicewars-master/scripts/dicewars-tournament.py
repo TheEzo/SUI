@@ -47,6 +47,7 @@ PLAYING_AIs = [
     # 'dt.wpm_d',
     # 'dt.wpm_s',
     'dt.wpm_c',
+    'xwilla00',
     # 'xlogin42',
     'xlogin00',
 ]
