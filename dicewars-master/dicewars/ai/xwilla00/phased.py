@@ -72,44 +72,7 @@ class FinalAI:
                     only_adventage_moves.append(([(move[0].get_name(), move[1].get_name())], board_after_move))         
             if (top_move_first_layer[0] != None):
                 return BattleCommand(top_move_first_layer[0][0].get_name(), top_move_first_layer[0][1].get_name())
-                
-            deep = 1 #hloubka - 1 (prvni iterace se provede mimo cyklus)
-
-            for i in range(1, deep + 1):
-                top_move = (None, 0)
-                tmp_list = list()
-                for b in only_adventage_moves:
-                    board_tmp = b[1]
-                    possible_moves_for_board = list(possible_attacks(board_tmp, self.player_name))
-                    possible_moves_with_advantage = list()
-                    for move in all_moves:
-                        if attacker_advantage(move[0], move[1]) >= 0:
-                            possible_moves_with_advantage.append(move)
-
-                    for move in possible_moves_for_board:
-                        board_after_move = copy.deepcopy(board_tmp)
-                        b0 = copy.deepcopy(b[0])
-                        attacker = board_after_move.get_area(move[0].get_name())
-                        defender = board_after_move.get_area(move[1].get_name())
-                        attacker.set_dice(1)
-                        defender.set_dice(move[0].get_dice() - 1)
-                        defender.set_owner(self.player_name)
-                        score = get_score_by_player(self.player_name, board_after_move)
-                        # self.logger.debug(str((move[0].get_name(), move[1].get_name())))
-                        b0.append((move[0].get_name(), move[1].get_name()))
-                        # self.logger.debug("B0 " + str(b0))
-                        to_append = ( b0, board_after_move)
-                        if score >= i + 2 + original_score and top_move_first_layer[1] < score:
-                            top_move = (to_append, score)
-                        tmp_list.append(to_append)
-
-
-                if (top_move[0] != None):
-                    self.logger.debug(str(top_move))
-                    return BattleCommand(top_move[0][0][0][0], top_move[0][0][0][1])
-
-                only_adventage_moves = tmp_list
-
+            
             all_evaluated_moves = []
             
             if time_left < 0.3 or time_left / 0.05 < len(all_moves):
