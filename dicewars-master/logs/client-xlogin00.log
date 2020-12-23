@@ -1,21 +1,26 @@
 DEBUG:CLIENT:Started socket daemon.
-DEBUG:CLIENT:Received message: {'areas': {'1': {'adjacent_areas': [6, 2, 3, 8], 'owner': 3, 'dice': 3}, '2': {'adjacent_areas': [1, 16, 10, 4], 'owner': 2, 'dice': 3}, '3': {'adjacent_areas': [1, 5, 6], 'owner': 1, 'dice': 3}, '4': {'adjacent_areas': [2, 11, 10, 7], 'owner': 2, 'dice': 3}, '5': {'adjacent_areas': [3, 12, 6], 'owner': 3, 'dice': 3}, '6': {'adjacent_areas': [5, 3, 19, 1], 'owner': 1, 'dice': 3}, '7': {'adjacent_areas': [4, 9, 18], 'owner': 4, 'dice': 3}, '8': {'adjacent_areas': [1], 'owner': 4, 'dice': 3}, '9': {'adjacent_areas': [28, 7, 18, 13], 'owner': 3, 'dice': 3}, '10': {'adjacent_areas': [16, 2, 17, 11, 14, 4], 'owner': 2, 'dice': 3}, '11': {'adjacent_areas': [14, 10, 4, 13], 'owner': 1, 'dice': 3}, '12': {'adjacent_areas': [19, 23, 5], 'owner': 3, 'dice': 3}, '13': {'adjacent_areas': [11, 28, 14, 9], 'owner': 3, 'dice': 3}, '14': {'adjacent_areas': [15, 13, 11, 10], 'owner': 1, 'dice': 3}, '15': {'adjacent_areas': [14, 20], 'owner': 4, 'dice': 3}, '16': {'adjacent_areas': [2, 10, 17, 25], 'owner': 1, 'dice': 3}, '17': {'adjacent_areas': [16, 10, 25, 24], 'owner': 4, 'dice': 3}, '18': {'adjacent_areas': [7, 9, 28], 'owner': 2, 'dice': 3}, '19': {'adjacent_areas': [12, 23, 21, 6, 29], 'owner': 2, 'dice': 3}, '20': {'adjacent_areas': [15, 22, 24], 'owner': 1, 'dice': 3}, '21': {'adjacent_areas': [19, 25], 'owner': 1, 'dice': 3}, '22': {'adjacent_areas': [20], 'owner': 3, 'dice': 3}, '23': {'adjacent_areas': [19, 29, 12], 'owner': 4, 'dice': 3}, '24': {'adjacent_areas': [17, 20, 26, 27], 'owner': 2, 'dice': 3}, '25': {'adjacent_areas': [16, 17, 21], 'owner': 4, 'dice': 3}, '26': {'adjacent_areas': [24, 27], 'owner': 2, 'dice': 3}, '27': {'adjacent_areas': [26, 24], 'owner': 4, 'dice': 3}, '28': {'adjacent_areas': [13, 9, 18], 'owner': 3, 'dice': 3}, '29': {'adjacent_areas': [23, 19], 'owner': 1, 'dice': 3}}, 'score': {'4': 2, '1': 2, '2': 3, '3': 3}, 'type': 'game_start', 'player': 3, 'no_players': 4, 'current_player': 1, 'board': {'1': {'hexes': [[-2, 8], [-3, 9], [0, 8], [-1, 7], [-4, 8], [-1, 9], [-3, 7], [-4, 6], [-4, 10], [-2, 10], [1, 7], [-1, 11], [-5, 9], [-6, 10], [1, 9], [-5, 11], [0, 10], [-3, 11]], 'neighbours': [6, 2, 3, 8]}, '2': {'hexes': [[-7, 5], [-5, 5], [-6, 6], [-8, 4], [-9, 5], [-8, 6], [-6, 4], [-5, 7], [-7, 3], [-10, 4], [-11, 5], [-6, 8], [-3, 5], [-7, 7], [-11, 3], [-4, 4], [-9, 3]], 'neighbours': [1, 16, 10, 4]}, '3': {'hexes': [[3, 11], [4, 10], [2, 10], [2, 12], [1, 11], [5, 11], [4, 12], [7, 11], [6, 12], [6, 10], [3, 9], [3, 13], [5, 13], [7, 9], [7, 13], [5, 9]], 'neighbours': [1, 5, 6]}, '4': {'hexes': [[-14, 4], [-15, 5], [-12, 4], [-13, 5], [-15, 3], [-16, 4], [-13, 3], [-14, 2], [-17, 3], [-17, 5], [-14, 6], [-16, 6]], 'neighbours': [2, 11, 10, 7]}, '5': {'hexes': [[10, 12], [9, 13], [12, 12], [9, 11], [11, 11], [11, 13], [8, 12], [13, 13], [8, 10], [15, 13], [10, 10], [14, 12], [9, 9], [13, 11], [10, 8]], 'neighbours': [3, 12, 6]}, '6': {'hexes': [[8, 6], [10, 6], [9, 7], [9, 5], [6, 6], [7, 7], [7, 5], [4, 6], [8, 8], [5, 7], [5, 5], [12, 6], [6, 8], [4, 8], [3, 7], [2, 8]], 'neighbours': [5, 3, 19, 1]}, '7': {'hexes': [[-19, 7], [-18, 6], [-20, 8], [-18, 8], [-17, 7], [-21, 7], [-20, 6], [-16, 8], [-17, 9], [-23, 7], [-15, 7], [-24, 6], [-22, 8], [-23, 9], [-22, 6]], 'neighbours': [4, 9, 18]}, '8': {'hexes': [[-9, 11], [-8, 12], [-11, 11], [-10, 12], [-7, 11], [-8, 10], [-10, 10], [-9, 9], [-11, 9], [-7, 13], [-12, 12], [-9, 13], [-6, 12]], 'neighbours': [1]}, '9': {'hexes': [[-24, 4], [-25, 3], [-25, 5], [-26, 4], [-22, 4], [-23, 5], [-23, 3], [-21, 5], [-21, 3], [-27, 5], [-22, 2], [-26, 2], [-24, 2]], 'neighbours': [28, 7, 18, 13]}, '10': {'hexes': [[-9, 1], [-8, 2], [-10, 2], [-8, 0], [-10, 0], [-11, 1], [-7, 1], [-9, -1], [-7, -1], [-8, -2], [-12, 0], [-6, 0], [-11, -1], [-12, 2], [-13, 1], [-13, -1]], 'neighbours': [16, 2, 17, 11, 14, 4]}, '11': {'hexes': [[-16, 0], [-17, -1], [-15, -1], [-14, 0], [-18, 0], [-17, 1], [-15, 1], [-16, 2], [-20, 0], [-19, -1], [-22, 0], [-21, -1]], 'neighbours': [14, 10, 4, 13]}, '12': {'hexes': [[15, 9], [16, 8], [17, 9], [14, 8], [13, 9], [16, 10], [14, 10], [12, 10], [15, 7], [15, 11], [11, 9], [12, 8], [17, 11], [18, 12]], 'neighbours': [19, 23, 5]}, '13': {'hexes': [[-25, -1], [-23, -1], [-27, -1], [-26, 0], [-26, -2], [-24, -2], [-24, 0], [-28, -2], [-28, 0], [-22, -2], [-23, -3], [-25, -3], [-29, -1], [-30, 0], [-23, 1], [-31, -1], [-30, -2]], 'neighbours': [11, 28, 14, 9]}, '14': {'hexes': [[-19, -3], [-18, -4], [-21, -3], [-18, -2], [-20, -2], [-17, -3], [-20, -4], [-16, -2], [-19, -5], [-20, -6], [-22, -4], [-14, -2], [-12, -2], [-21, -5]], 'neighbours': [15, 13, 11, 10]}, '15': {'hexes': [[-15, -5], [-17, -5], [-14, -6], [-14, -4], [-13, -5], [-16, -6], [-16, -4], [-15, -3], [-13, -7], [-13, -3], [-12, -6], [-17, -7], [-15, -7], [-14, -8]], 'neighbours': [14, 20]}, '16': {'hexes': [[-4, 2], [-2, 2], [-3, 1], [-3, 3], [-5, 3], [-6, 2], [-5, 1], [-1, 3], [-4, 0], [-2, 0], [-1, 1], [-2, 4], [0, 2], [1, 3]], 'neighbours': [2, 10, 17, 25]}, '17': {'hexes': [[-4, -2], [-5, -1], [-3, -3], [-5, -3], [-3, -1], [-6, -2], [-2, -2], [-4, -4], [-6, -4], [-2, -4], [-1, -1], [-5, -5], [-3, -5], [-7, -3], [0, -4], [-8, -4], [-4, -6], [-1, -3]], 'neighbours': [16, 10, 25, 24]}, '18': {'hexes': [[-27, 9], [-26, 10], [-26, 8], [-25, 9], [-29, 9], [-28, 10], [-28, 8], [-24, 8], [-25, 7], [-24, 10], [-29, 7], [-27, 7], [-26, 6], [-28, 6], [-30, 8], [-30, 6], [-30, 10], [-31, 9]], 'neighbours': [7, 9, 28]}, '19': {'hexes': [[19, 7], [17, 7], [21, 7], [20, 8], [18, 6], [20, 6], [18, 8], [19, 5], [16, 6], [17, 5], [16, 4], [15, 5], [18, 4], [14, 6], [15, 3], [21, 5], [13, 5], [22, 8]], 'neighbours': [12, 23, 21, 6, 29]}, '20': {'hexes': [[-16, -10], [-14, -10], [-15, -9], [-17, -9], [-17, -11], [-18, -10], [-15, -11], [-13, -9], [-16, -8], [-12, -10], [-12, -8], [-19, -11], [-13, -11], [-20, -10], [-18, -8]], 'neighbours': [15, 22, 24]}, '21': {'hexes': [[12, 2], [11, 3], [11, 1], [13, 3], [14, 2], [10, 2], [13, 1], [12, 0], [12, 4], [15, 1], [9, 3], [9, 1], [14, 4]], 'neighbours': [19, 25]}, '22': {'hexes': [[-21, -13], [-22, -12], [-22, -14], [-19, -13], [-20, -14], [-23, -13], [-20, -12], [-24, -14], [-17, -13], [-24, -12], [-16, -12], [-21, -11], [-23, -11], [-18, -12], [-18, -14]], 'neighbours': [20]}, '23': {'hexes': [[22, 10], [23, 9], [21, 11], [24, 10], [21, 9], [23, 11], [20, 10], [25, 9], [19, 9], [26, 10], [19, 11], [20, 12], [18, 10], [25, 11], [27, 9], [22, 12], [24, 12]], 'neighbours': [19, 29, 12]}, '24': {'hexes': [[-6, -8], [-4, -8], [-8, -8], [-7, -9], [-7, -7], [-5, -7], [-5, -9], [-6, -6], [-9, -9], [-3, -7], [-10, -8], [-2, -6], [-4, -10]], 'neighbours': [17, 20, 26, 27]}, '25': {'hexes': [[3, 1], [4, 2], [2, 0], [2, 2], [1, 1], [5, 1], [4, 0], [0, 0], [6, 0], [7, -1], [5, -1], [3, 3], [9, -1], [8, -2], [1, -1], [7, 1], [4, -2], [10, -2], [8, 0], [3, -1], [6, -2]], 'neighbours': [16, 17, 21]}, '26': {'hexes': [[-1, -11], [-2, -10], [1, -11], [0, -12], [-3, -11], [-2, -12], [0, -10], [-1, -13], [2, -10], [4, -10], [3, -9], [-1, -9], [1, -9], [0, -8], [1, -13], [2, -8]], 'neighbours': [24, 27]}, '27': {'hexes': [[-5, -13], [-6, -12], [-4, -12], [-6, -14], [-4, -14], [-3, -13], [-7, -13], [-2, -14], [-5, -11], [-8, -14], [-7, -11], [0, -14], [-10, -14], [2, -14], [3, -13], [-11, -13], [-8, -12], [-9, -13]], 'neighbours': [26, 24]}, '28': {'hexes': [[-30, 2], [-31, 1], [-29, 1], [-28, 2], [-32, 2], [-29, 3], [-31, 3], [-32, 4], [-32, 0], [-30, 4], [-28, 4], [-31, 5], [-27, 3], [-27, 1], [-29, 5], [-25, 1], [-32, 6]], 'neighbours': [13, 9, 18]}, '29': {'hexes': [[29, 7], [30, 6], [31, 7], [28, 6], [30, 8], [28, 8], [27, 7], [29, 9], [31, 9], [26, 8], [24, 8], [27, 5], [25, 5], [29, 5], [24, 4], [25, 7], [31, 5], [26, 6]], 'neighbours': [23, 19]}}, 'order': [1, 2, 3, 4]}
+DEBUG:CLIENT:Received message: {'areas': {'1': {'adjacent_areas': [2, 7, 10], 'owner': 3, 'dice': 3}, '2': {'adjacent_areas': [1, 7, 3], 'owner': 2, 'dice': 3}, '3': {'adjacent_areas': [2, 7, 13, 4, 5], 'owner': 1, 'dice': 3}, '4': {'adjacent_areas': [11, 3, 6, 5, 23, 13], 'owner': 2, 'dice': 3}, '5': {'adjacent_areas': [4, 3, 12, 11], 'owner': 3, 'dice': 3}, '6': {'adjacent_areas': [9, 4, 11, 23, 8], 'owner': 1, 'dice': 3}, '7': {'adjacent_areas': [21, 2, 3, 13, 1], 'owner': 4, 'dice': 3}, '8': {'adjacent_areas': [9, 6, 11, 16], 'owner': 4, 'dice': 3}, '9': {'adjacent_areas': [6, 8, 19, 16, 23], 'owner': 3, 'dice': 3}, '10': {'adjacent_areas': [1, 14], 'owner': 2, 'dice': 3}, '11': {'adjacent_areas': [6, 8, 4, 5], 'owner': 1, 'dice': 3}, '12': {'adjacent_areas': [5], 'owner': 3, 'dice': 3}, '13': {'adjacent_areas': [23, 7, 4, 3, 18], 'owner': 3, 'dice': 3}, '14': {'adjacent_areas': [10, 15, 28, 20], 'owner': 1, 'dice': 3}, '15': {'adjacent_areas': [21, 14, 20, 18, 25], 'owner': 4, 'dice': 3}, '16': {'adjacent_areas': [17, 19, 9, 8], 'owner': 1, 'dice': 3}, '17': {'adjacent_areas': [16, 19, 24], 'owner': 4, 'dice': 3}, '18': {'adjacent_areas': [15, 25, 13, 23], 'owner': 2, 'dice': 3}, '19': {'adjacent_areas': [9, 16, 22, 24, 17], 'owner': 2, 'dice': 3}, '20': {'adjacent_areas': [15, 28, 14], 'owner': 1, 'dice': 3}, '21': {'adjacent_areas': [7, 15], 'owner': 1, 'dice': 3}, '22': {'adjacent_areas': [19, 26, 24], 'owner': 3, 'dice': 3}, '23': {'adjacent_areas': [6, 13, 9, 4, 18], 'owner': 4, 'dice': 3}, '24': {'adjacent_areas': [27, 22, 19, 17], 'owner': 2, 'dice': 3}, '25': {'adjacent_areas': [15, 18], 'owner': 4, 'dice': 3}, '26': {'adjacent_areas': [22], 'owner': 2, 'dice': 3}, '27': {'adjacent_areas': [24, 29], 'owner': 4, 'dice': 3}, '28': {'adjacent_areas': [14, 20], 'owner': 3, 'dice': 3}, '29': {'adjacent_areas': [27], 'owner': 1, 'dice': 3}}, 'score': {'3': 2, '1': 2, '4': 2, '2': 2}, 'type': 'game_start', 'player': 2, 'no_players': 4, 'current_player': 1, 'board': {'1': {'hexes': [[28, 0], [27, 1], [30, 0], [27, -1], [26, 0], [29, 1], [29, -1], [31, -1], [28, 2], [28, -2], [27, -3], [26, -2]], 'neighbours': [2, 7, 10]}, '2': {'hexes': [[26, 4], [28, 4], [24, 4], [27, 3], [27, 5], [25, 3], [25, 5], [22, 4], [28, 6], [21, 5], [29, 3], [26, 2], [30, 4], [24, 6], [29, 5], [23, 3], [26, 6], [23, 5]], 'neighbours': [1, 7, 3]}, '3': {'hexes': [[18, 6], [20, 6], [19, 5], [17, 5], [19, 7], [16, 6], [17, 7], [21, 7], [20, 8], [15, 7], [18, 8], [18, 4]], 'neighbours': [2, 7, 13, 4, 5]}, '4': {'hexes': [[12, 8], [13, 9], [11, 7], [11, 9], [13, 7], [10, 8], [14, 8], [16, 8], [10, 6], [14, 10], [12, 6], [15, 9], [11, 5], [9, 7], [15, 11], [14, 6]], 'neighbours': [11, 3, 6, 5, 23, 13]}, '5': {'hexes': [[18, 10], [17, 9], [19, 11], [19, 9], [20, 10], [17, 11], [16, 10], [21, 9], [21, 11], [18, 12], [20, 12], [17, 13], [21, 13], [19, 13], [16, 12]], 'neighbours': [4, 3, 12, 11]}, '6': {'hexes': [[6, 8], [5, 7], [5, 9], [7, 7], [7, 9], [4, 8], [8, 8], [6, 6], [3, 9], [8, 6], [6, 10], [2, 10], [4, 10]], 'neighbours': [9, 4, 11, 23, 8]}, '7': {'hexes': [[20, 2], [19, 1], [21, 3], [19, 3], [21, 1], [22, 2], [18, 2], [24, 2], [17, 1], [20, 4], [25, 1], [23, 1], [17, 3], [24, 0], [22, 0], [15, 1], [21, -1], [25, -1], [23, -1]], 'neighbours': [21, 2, 3, 13, 1]}, '8': {'hexes': [[2, 12], [1, 11], [3, 11], [3, 13], [0, 12], [4, 12], [1, 13], [5, 13], [-2, 12], [7, 13], [-4, 12], [-1, 13]], 'neighbours': [9, 6, 11, 16]}, '9': {'hexes': [[-1, 9], [0, 10], [-2, 8], [0, 8], [1, 9], [-3, 9], [-2, 10], [2, 8], [3, 7], [1, 7], [-1, 7], [0, 6], [4, 6], [-4, 10], [-1, 11], [-3, 7], [-4, 8], [2, 6]], 'neighbours': [6, 8, 19, 16, 23]}, '10': {'hexes': [[25, -5], [26, -4], [24, -6], [27, -5], [26, -6], [23, -5], [24, -4], [22, -6], [28, -6], [27, -7], [30, -6], [25, -7], [29, -5]], 'neighbours': [1, 14]}, '11': {'hexes': [[9, 11], [10, 12], [7, 11], [8, 12], [11, 11], [10, 10], [8, 10], [9, 9], [13, 11], [6, 12], [12, 12], [5, 11], [12, 10], [13, 13], [14, 12], [15, 13], [9, 13], [11, 13]], 'neighbours': [6, 8, 4, 5]}, '12': {'hexes': [[24, 10], [23, 11], [25, 11], [23, 9], [26, 10], [25, 9], [22, 10], [28, 10], [27, 9], [28, 8], [30, 8], [24, 12], [29, 9], [31, 9]], 'neighbours': [5]}, '13': {'hexes': [[13, 3], [14, 4], [11, 3], [12, 2], [15, 3], [12, 4], [14, 2], [16, 4], [13, 1], [16, 2], [13, 5], [11, 1], [10, 0], [15, 5], [14, 0], [12, 0], [10, 4], [9, 1]], 'neighbours': [23, 7, 4, 3, 18]}, '14': {'hexes': [[20, -8], [21, -9], [19, -7], [22, -8], [19, -9], [18, -8], [21, -7], [17, -7], [17, -9], [18, -10], [16, -10], [17, -11], [20, -10], [19, -11], [23, -9], [16, -8], [15, -11]], 'neighbours': [10, 15, 28, 20]}, '15': {'hexes': [[13, -7], [11, -7], [14, -6], [12, -8], [15, -7], [12, -6], [14, -8], [16, -6], [13, -9], [11, -9], [10, -6], [12, -10], [17, -5], [9, -5], [10, -4], [11, -5]], 'neighbours': [21, 14, 20, 18, 25]}, '16': {'hexes': [[-8, 10], [-7, 11], [-10, 10], [-9, 11], [-7, 9], [-6, 10], [-9, 9], [-5, 11], [-6, 12], [-8, 12], [-10, 12], [-7, 13], [-3, 11], [-11, 11]], 'neighbours': [17, 19, 9, 8]}, '17': {'hexes': [[-14, 12], [-12, 12], [-13, 11], [-15, 13], [-16, 12], [-13, 13], [-15, 11], [-17, 11], [-14, 10], [-18, 12], [-11, 13], [-17, 13], [-13, 9], [-16, 10], [-12, 10]], 'neighbours': [16, 19, 24]}, '18': {'hexes': [[8, -2], [9, -3], [10, -2], [6, -2], [7, -3], [9, -1], [7, -1], [11, -1], [12, -2], [13, -1], [8, -4], [11, -3]], 'neighbours': [15, 25, 13, 23]}, '19': {'hexes': [[-7, 7], [-5, 7], [-8, 8], [-8, 6], [-6, 8], [-9, 7], [-6, 6], [-10, 8], [-4, 6], [-5, 9], [-12, 8], [-11, 9], [-10, 6]], 'neighbours': [9, 16, 22, 24, 17]}, '20': {'hexes': [[12, -12], [13, -13], [10, -12], [11, -11], [14, -12], [11, -13], [13, -11], [10, -10], [9, -11], [9, -13], [8, -12], [6, -12], [12, -14]], 'neighbours': [15, 28, 14]}, '21': {'hexes': [[18, -2], [19, -1], [16, -2], [20, -2], [17, -3], [17, -1], [19, -3], [16, -4], [14, -4], [20, 0], [15, -5], [18, -4], [13, -5]], 'neighbours': [7, 15]}, '22': {'hexes': [[-6, 4], [-5, 5], [-8, 4], [-7, 5], [-4, 4], [-5, 3], [-7, 3], [-9, 5], [-10, 4], [-11, 5], [-11, 3], [-3, 3], [-12, 4], [-3, 5], [-9, 3]], 'neighbours': [19, 26, 24]}, '23': {'hexes': [[6, 4], [4, 4], [7, 5], [5, 3], [7, 3], [8, 4], [5, 5], [9, 3], [8, 2], [6, 2], [2, 4], [9, 5], [10, 2], [5, 1], [7, 1], [8, 0], [6, 0], [3, 3]], 'neighbours': [6, 13, 9, 4, 18]}, '24': {'hexes': [[-15, 5], [-17, 5], [-14, 4], [-13, 5], [-16, 6], [-16, 4], [-14, 6], [-12, 6], [-13, 7], [-11, 7], [-15, 3], [-15, 7], [-14, 8], [-14, 2], [-16, 8]], 'neighbours': [27, 22, 19, 17]}, '25': {'hexes': [[5, -5], [6, -6], [7, -5], [4, -4], [6, -4], [4, -6], [3, -5], [5, -3], [3, -7], [7, -7], [2, -6], [5, -7], [4, -8], [0, -6]], 'neighbours': [15, 18]}, '26': {'hexes': [[-3, 1], [-4, 0], [-1, 1], [-2, 0], [-2, 2], [-5, 1], [-4, 2], [0, 0], [-1, -1], [-6, 2], [-5, -1], [1, -1], [2, 0], [-7, 1], [0, 2], [-3, -1], [-2, -2], [1, 1]], 'neighbours': [22]}, '27': {'hexes': [[-19, 3], [-17, 3], [-18, 4], [-18, 2], [-20, 4], [-20, 2], [-21, 3], [-19, 5], [-19, 1], [-17, 1], [-22, 4], [-20, 0], [-23, 5], [-16, 2], [-21, 1], [-21, 5]], 'neighbours': [24, 29]}, '28': {'hexes': [[19, -13], [20, -12], [18, -14], [21, -13], [20, -14], [18, -12], [17, -13], [16, -12], [22, -12], [21, -11], [23, -13], [23, -11], [16, -14], [22, -14], [24, -12]], 'neighbours': [14, 20]}, '29': {'hexes': [[-27, 5], [-26, 4], [-28, 4], [-28, 6], [-25, 5], [-29, 5], [-26, 6], [-25, 3], [-24, 4], [-24, 6], [-27, 3], [-22, 6], [-27, 7], [-30, 4], [-25, 7], [-31, 3], [-29, 3]], 'neighbours': [27]}}, 'order': [1, 2, 3, 4]}
 
-INFO:CLIENT:This is player name 3, the players order is [1, 2, 3, 4]
+INFO:CLIENT:This is player name 2, the players order is [1, 2, 3, 4]
 DEBUG:root:Starting clock with 10.000s left
 DEBUG:root:Stopped clock, now with 10.000s left
 DEBUG:AI:Received message type game_state.
-DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
 DEBUG:root:Starting clock with 10.000s left
 DEBUG:root:Stopped clock, now with 10.250s left
-DEBUG:AI:Sending battle message 13->11
+DEBUG:AI:Sending battle message 24->22
 DEBUG:AI:Received message type battle.
 DEBUG:root:Starting clock with 10.250s left
 DEBUG:root:Stopped clock, now with 10.500s left
-DEBUG:AI:Sending battle message 1->2
+DEBUG:AI:Sending battle message 4->11
 DEBUG:AI:Received message type battle.
 DEBUG:root:Starting clock with 10.500s left
 DEBUG:AI:I'm too well behaved. Let others play now.
@@ -25,7 +30,15 @@ DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
@@ -38,11 +51,11 @@ DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
 DEBUG:root:Starting clock with 10.750s left
 DEBUG:root:Stopped clock, now with 11.000s left
-DEBUG:AI:Sending battle message 9->7
+DEBUG:AI:Sending battle message 2->1
 DEBUG:AI:Received message type battle.
 DEBUG:root:Starting clock with 11.000s left
 DEBUG:root:Stopped clock, now with 11.250s left
-DEBUG:AI:Sending battle message 28->18
+DEBUG:AI:Sending battle message 26->22
 DEBUG:AI:Received message type battle.
 DEBUG:root:Starting clock with 11.250s left
 DEBUG:AI:I'm too well behaved. Let others play now.
@@ -54,55 +67,33 @@ DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
 DEBUG:root:Starting clock with 11.500s left
 DEBUG:root:Stopped clock, now with 11.750s left
-DEBUG:AI:Sending battle message 22->20
+DEBUG:AI:Sending battle message 22->19
 DEBUG:AI:Received message type battle.
 DEBUG:root:Starting clock with 11.750s left
-DEBUG:AI:No more possible turns.
 DEBUG:root:Stopped clock, now with 12.000s left
+DEBUG:AI:Sending battle message 10->14
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 12.000s left
+DEBUG:AI:I'm too well behaved. Let others play now.
+DEBUG:root:Stopped clock, now with 12.250s left
 DEBUG:AI:Sending end_turn message.
 DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
@@ -117,25 +108,21 @@ DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 12.250s left
+DEBUG:root:Stopped clock, now with 12.500s left
+DEBUG:AI:Sending battle message 10->1
 DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 12.500s left
+DEBUG:root:Stopped clock, now with 12.750s left
+DEBUG:AI:Sending battle message 26->22
 DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 12.750s left
+DEBUG:AI:I'm too well behaved. Let others play now.
+DEBUG:root:Stopped clock, now with 13.000s left
+DEBUG:AI:Sending end_turn message.
 DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
@@ -145,57 +132,105 @@ DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 13.000s left
+DEBUG:root:Stopped clock, now with 13.250s left
+DEBUG:AI:Sending battle message 22->19
 DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 13.250s left
+DEBUG:root:Stopped clock, now with 13.500s left
+DEBUG:AI:Sending battle message 19->9
 DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 13.500s left
+DEBUG:AI:I'm too well behaved. Let others play now.
+DEBUG:root:Stopped clock, now with 13.749s left
+DEBUG:AI:Sending end_turn message.
 DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 13.749s left
+DEBUG:root:Stopped clock, now with 13.999s left
+DEBUG:AI:Sending battle message 22->24
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 13.999s left
+DEBUG:AI:No more possible turns.
+DEBUG:root:Stopped clock, now with 14.249s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 14.249s left
+DEBUG:root:Stopped clock, now with 14.499s left
+DEBUG:AI:Sending battle message 22->19
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 14.499s left
+DEBUG:AI:No more possible turns.
+DEBUG:root:Stopped clock, now with 14.749s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
-DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 14.749s left
+DEBUG:root:Stopped clock, now with 14.999s left
+DEBUG:AI:Sending battle message 22->19
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 14.999s left
+DEBUG:root:Stopped clock, now with 15.249s left
+DEBUG:AI:Sending battle message 19->9
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 15.249s left
+DEBUG:AI:I'm too well behaved. Let others play now.
+DEBUG:root:Stopped clock, now with 15.499s left
+DEBUG:AI:Sending end_turn message.
 DEBUG:AI:Received message type end_turn.
 DEBUG:AI:Received message type battle.
 DEBUG:AI:Received message type battle.
-DEBUG:AI:Received message type game_end.
-INFO:AI:Player 2 has won
+DEBUG:AI:Received message type battle.

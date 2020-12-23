@@ -4,6 +4,7 @@ from dicewars.client.ai_driver import BattleCommand, EndTurnCommand
 from .nn import NN
 from .utils import *
 import time
+import copy
 
 class FinalAI:
 
@@ -49,6 +50,38 @@ class FinalAI:
             # tady nekde volani A* nebo cehosi podobnyho
             self.turn_id = self.turn_id + 1
             self.logger.debug("Turn " + str(self.turn_id) + " begin....")
+
+            
+
+            #pokud neni co propojit nepropojuj
+            if len(board.get_players_regions(self.player_name)) == 1:
+                try_connect_regions = False
+            else: 
+                try_connect_regions = True
+
+            self.logger.debug(f"{try_connect_regions}")
+
+            # tady nekde volani A* nebo cehosi podobnyho
+            if True:
+                original_score = get_score_by_player(self.player_name, board)
+                only_adventage_moves = list()
+                all_moves = list(possible_attacks(board, self.player_name))
+                top_move_first_layer = (None, 0)
+                for move in all_moves:
+                    if attacker_advantage(move[0], move[1]) >= 0:
+                        board_after_move = copy.deepcopy(board)
+                        attacker = board_after_move.get_area(move[0].get_name()) 
+                        defender = board_after_move.get_area(move[1].get_name()) 
+                        attacker.set_dice(1)
+                        defender.set_dice(move[0].get_dice() - 1)
+                        defender.set_owner(self.player_name)
+                        score = get_score_by_player(self.player_name, board_after_move)
+                        if score >= 2 + original_score and top_move_first_layer[1] < score:
+                            top_move_first_layer = (move, score)
+                        only_adventage_moves.append(([(move[0].get_name(), move[1].get_name())], board_after_move))
+
+                if (top_move_first_layer[0] != None):
+                    return BattleCommand(top_move_first_layer[0][0].get_name(), top_move_first_layer[0][1].get_name())
 
             all_evaluated_moves = []
             all_moves = list(possible_attacks(board, self.player_name))
