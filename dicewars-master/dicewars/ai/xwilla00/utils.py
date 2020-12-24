@@ -2,6 +2,7 @@ from typing import Iterator, Tuple
 
 from dicewars.client.game.board import Board
 
+
 ### Poznamka autoru:
 ### Nektere zdejsi funkce byly prevzaty ze souboru utils.py v adresari ai.
 
@@ -151,7 +152,7 @@ def possible_attacks(board: Board, player_name: int) -> Iterator[Tuple[int, int]
         neighbours = area.get_adjacent_areas()
         for adj in neighbours:
             adjacent_area = board.get_area(adj)
-            if not attacker_advantage(area, adjacent_area):
+            if attacker_advantage(area, adjacent_area) < 0:
                 continue
             if adjacent_area.get_owner_name() != player_name:
                 yield (area, adjacent_area)
