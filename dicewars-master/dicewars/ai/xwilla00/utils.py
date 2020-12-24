@@ -2,6 +2,8 @@ from typing import Iterator, Tuple
 
 from dicewars.client.game.board import Board
 
+### Poznamka autoru:
+### Nektere zdejsi funkce byly prevzaty ze souboru utils.py v adresari ai.
 
 def attacker_advantage(attacker, defender):
     return attacker.get_dice() - defender.get_dice()

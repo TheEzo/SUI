@@ -18,33 +18,15 @@ class FinalAI:
         self.players_order = players_order
         self.logger = logging.getLogger('AI')
         self.turn_id = 0
-        self.reserve = 0
         self.nn = NN()
         self.t = 0
         self.adjacent_areas_max = max_count_of_adjacen(board)
-        self.attacked = None
 
-        self.won = 0
+        # self.reserve = 0
 
     def ai_turn(self, board, nb_moves_this_turn, nb_turns_this_game, time_left):
         """AI agent's turn
         """
-        # start_turn = time.time()
-
-        # if self.attacked is not None:
-        # new_owner = board.areas[str(self.attacked)].get_owner_name()
-
-        # if new_owner == self.player_name:
-        #    self.logger.debug("Attack successful")
-        #    self.won += 0.04
-        # else:
-        #    self.logger.debug("Attack not successful")
-        #    self.won -= 0.06
-        #
-        #    if self.won < 0:
-        #        self.won = 0
-
-        # self.attacked = None
 
         self.turn_id = self.turn_id + 1
         # self.logger.debug("Turn " + str(self.turn_id) + " begin....")
@@ -92,7 +74,6 @@ class FinalAI:
 
                 if attack_value > 0.65:  # 0.65
                     # self.logger.debug(f"Attacking: {self.t}, {attack_value}")
-                    self.attacked = move[1].get_name()
                     return BattleCommand(move[0].get_name(), move[1].get_name())
 
             return self.end_turn_command_and_reserv_calculation(board)
@@ -106,7 +87,6 @@ class FinalAI:
 
                 if attack_value > 0.75:
                     # self.logger.debug(f"Attacking: {self.t}, {attack_value}")
-                    self.attacked = move[1].get_name()
                     return BattleCommand(move[0].get_name(), move[1].get_name())
 
                 all_evaluated_moves.append((move[0], move[1], attack_value))
@@ -120,9 +100,8 @@ class FinalAI:
 
         # self.logger.debug(f'evaluated: {best_move[2]}')
 
-        if (self.t > 1 and best_move[2] > (0.56 - self.won)) or (best_move[2] > (0.53 - self.won)):
+        if (self.t > 1 and best_move[2] > 0.56) or (best_move[2] > 0.53):
             # self.logger.debug(f"Attacking: {self.t}, {best_move[2]}")
-            self.attacked = best_move[1].get_name()
             self.t += 1
             return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
 
