@@ -100,10 +100,19 @@ class FinalAI:
 
         # self.logger.debug(f'evaluated: {best_move[2]}')
 
-        if (self.t > 1 and best_move[2] > 0.56) or (best_move[2] > 0.53):
+        move_prob = best_move[2]
+
+        if (self.t > 1 and move_prob > 0.56) or (move_prob > 0.53):
             # self.logger.debug(f"Attacking: {self.t}, {best_move[2]}")
             self.t += 1
             return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
+        else:
+            attacker_dice = best_move[0].get_dice()
+            defender_dice = best_move[1].get_dice()
+
+            if (self.t < 4 and move_prob > 0.4 and attacker_dice > defender_dice) or (self.t < 3 and attacker_dice == defender_dice):
+                self.t += 1
+                return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
 
         # self.logger.debug("Nothing to do")
         return self.end_turn_command_and_reserv_calculation(board)
