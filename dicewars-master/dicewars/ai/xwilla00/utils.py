@@ -144,7 +144,7 @@ def attack_succcess_probability(atk, df):
     }[atk][df]
 
 
-def possible_attacks(board: Board, player_name: int) -> Iterator[Tuple[int, int]]:
+def possible_attacks(board: Board, player_name: int, equals=False) -> Iterator[Tuple[int, int]]:
     for area in board.get_player_border(player_name):
         if not area.can_attack():
             continue
@@ -152,7 +152,8 @@ def possible_attacks(board: Board, player_name: int) -> Iterator[Tuple[int, int]
         neighbours = area.get_adjacent_areas()
         for adj in neighbours:
             adjacent_area = board.get_area(adj)
-            if attacker_advantage(area, adjacent_area) < 0:
+            atk_adv = attacker_advantage(area, adjacent_area)
+            if (not equals and atk_adv <= 0) or (equals and atk_adv == 0):
                 continue
             if adjacent_area.get_owner_name() != player_name:
                 yield (area, adjacent_area)

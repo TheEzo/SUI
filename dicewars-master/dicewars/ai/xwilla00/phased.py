@@ -32,6 +32,8 @@ class FinalAI:
         # self.logger.debug("Turn " + str(self.turn_id) + " begin....")
 
         all_moves = list(possible_attacks(board, self.player_name))
+        if not all_moves and self.t < 3:
+            all_moves = list(possible_attacks(board, self.player_name, True))
 
         if len(all_moves) == 0:
             return self.end_turn_command_and_reserv_calculation(board)
