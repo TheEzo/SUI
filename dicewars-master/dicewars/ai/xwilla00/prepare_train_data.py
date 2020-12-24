@@ -1,6 +1,8 @@
 import json
 import os
+
 import numpy as np
+
 
 def hash_list(value):
     res = ''
@@ -34,7 +36,7 @@ def run():
     train_data = np.array(train_data)
     nb_count_norm = normalize(train_data[:, -1])
 
-    train_data[:,-1] = nb_count_norm
+    train_data[:, -1] = nb_count_norm
 
     evaluated_data = []
 
@@ -59,6 +61,7 @@ def run():
             updated = True
         r.write('\n]\n')
 
+
 def normalize(data):
     data = np.array(data)
 
@@ -68,51 +71,52 @@ def normalize(data):
 
 
 def eval(vector):
-    if vector[0] > 0.67 and vector[0] < 0.84: # utok na oblasti, ktere maji o jednu kostku min
+    if vector[0] > 0.67 and vector[0] < 0.84:  # utok na oblasti, ktere maji o jednu kostku min
         res = vector[0] * 4.5
-    elif vector[0] > 0.844 and vector[0] < 0.94: # utok na oblasti, ktere maji o dve kostky min
+    elif vector[0] > 0.844 and vector[0] < 0.94:  # utok na oblasti, ktere maji o dve kostky min
         res = vector[0] * 3
-    elif vector[0] > 0.6: # zbytek oblasti s mensim poctem kostek
+    elif vector[0] > 0.6:  # zbytek oblasti s mensim poctem kostek
         res = vector[0] * 2
-    elif vector[0] > 0.44 and vector[0] < 0.47: # utok na oblasti se stejnym poctem kostek - riskujeme pouze tehdy, pokud mame dobre rozehranou hru
+    elif vector[0] > 0.44 and vector[
+        0] < 0.47:  # utok na oblasti se stejnym poctem kostek - riskujeme pouze tehdy, pokud mame dobre rozehranou hru
         attack_prob = vector[0]
 
-        if vector[1] > vector[2]: # utocime z nejvetsiho regionu - obrana
+        if vector[1] > vector[2]:  # utocime z nejvetsiho regionu - obrana
             attack_prob += 0.2
 
-        if vector[3] > vector[4]: # region ma vetsi hustotu - obrana
+        if vector[3] > vector[4]:  # region ma vetsi hustotu - obrana
             attack_prob += 0.3
 
-        if vector[5] > vector[6]: # mame v prumeru vic kostek
+        if vector[5] > vector[6]:  # mame v prumeru vic kostek
             attack_prob += 0.3
 
-        if vector[7] > vector[8]: # mame vic oblasti
+        if vector[7] > vector[8]:  # mame vic oblasti
             attack_prob += 0.2
-       
+
         return attack_prob
     else:
         res = vector[0] * 1.5
 
-    if vector[1] != vector[2] : # attacker_max_regio_flag, defender_max_regio_flag
+    if vector[1] != vector[2]:  # attacker_max_regio_flag, defender_max_regio_flag
         res += 0.5
 
-    if vector[3] > vector[4]: # attacker_region_occupancy, defender_region_occupancy
-        res += 0.8 # 0.8
+    if vector[3] > vector[4]:  # attacker_region_occupancy, defender_region_occupancy
+        res += 0.8  # 0.8
     elif vector[3] < vector[4]:
-        res -= 0.35 # 0.25
+        res -= 0.35  # 0.25
 
-    if vector[5] > vector[6]: # attacker_dice_proportion, defender_dice_proportion
-        res += 0.4 #0.5
+    if vector[5] > vector[6]:  # attacker_dice_proportion, defender_dice_proportion
+        res += 0.4  # 0.5
     elif vector[5] < vector[6]:
-        res -= 0.25 # 0.15
+        res -= 0.25  # 0.15
 
-    if vector[7] > vector[8]: # attacker_area_proportion, defender_area_proportion
-        res += 0.6 #0.6
+    if vector[7] > vector[8]:  # attacker_area_proportion, defender_area_proportion
+        res += 0.6  # 0.6
     elif vector[7] < vector[8]:
-        res -= 0.2 # 0.25
+        res -= 0.2  # 0.25
 
     # res += vector[9]  * 0.5   # reserve
-    res += vector[9] * 0.3   # enemy_score 0.3
+    res += vector[9] * 0.3  # enemy_score 0.3
     res -= vector[10] * 0.2  # neighbours_count 0.3
 
     if res < 0:
@@ -120,7 +124,9 @@ def eval(vector):
 
     return res
 
+
 if __name__ == '__main__':
     run()
     from dicewars.ai.xwilla00.nn import train
+
     train()

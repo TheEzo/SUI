@@ -45,5 +45,6 @@ def train():
         ys.append(d['res'])
     NN(True).train(xs, ys)
 
+
 if __name__ == '__main__':
     train()
