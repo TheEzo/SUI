@@ -17,9 +17,7 @@ class FinalAI:
         self.player_name = player_name
         self.players_order = players_order
         self.logger = logging.getLogger('AI')
-        self.turn_id = 0
         self.nn = NN()
-        self.t = 0
         self.adjacent_areas_max = max_count_of_adjacen(board)
 
         # self.reserve = 0
@@ -28,11 +26,8 @@ class FinalAI:
         """AI agent's turn
         """
 
-        self.turn_id = self.turn_id + 1
-        # self.logger.debug("Turn " + str(self.turn_id) + " begin....")
-
         all_moves = list(possible_attacks(board, self.player_name))
-        if not all_moves and self.t < 3:
+        if not all_moves and nb_moves_this_turn < 3:
             all_moves = list(possible_attacks(board, self.player_name, True))
 
         if len(all_moves) == 0:
@@ -66,7 +61,7 @@ class FinalAI:
 
         all_moves.sort(key=lambda tup: (tup[0].get_dice() * tup[0].get_dice()) - tup[1].get_dice(), reverse=True)
 
-        if self.t > 5:
+        if nb_moves_this_turn > 5:
             for move in all_moves:
                 nn_input_vec = self.get_nn_vector(board, move)
                 attack_value = self.nn.eval(nn_input_vec)[0][0]
@@ -104,17 +99,18 @@ class FinalAI:
 
         move_prob = best_move[2]
 
-        if (self.t > 1 and move_prob > 0.56) or (move_prob > 0.53):
+        if move_prob > 0.55: #0.54 5 
             # self.logger.debug(f"Attacking: {self.t}, {best_move[2]}")
-            self.t += 1
             return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
         else:
             attacker_dice = best_move[0].get_dice()
             defender_dice = best_move[1].get_dice()
 
-            if (self.t < 4 and move_prob > 0.4 and attacker_dice > defender_dice) or (self.t < 3 and attacker_dice == defender_dice):
-                self.t += 1
-                return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
+            # and move_prob > 0.4
+            
+            if attacker_dice >= 7 and attacker_dice >= defender_dice:
+               return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
+            
 
         # self.logger.debug("Nothing to do")
         return self.end_turn_command_and_reserv_calculation(board)
@@ -136,8 +132,6 @@ class FinalAI:
         #
         # if self.reserve > 64:  # e rezerva 62?
         #     self.reserve = 62
-
-        self.t = 0
 
         return EndTurnCommand()
 

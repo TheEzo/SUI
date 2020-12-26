@@ -1,0 +1,1799 @@
+DEBUG:CLIENT:Started socket daemon.
+DEBUG:CLIENT:Received message: {'areas': {'1': {'adjacent_areas': [22, 4, 3, 7, 2], 'owner': 3, 'dice': 3}, '2': {'adjacent_areas': [6, 1, 22, 12, 7], 'owner': 2, 'dice': 3}, '3': {'adjacent_areas': [4, 1, 9, 5], 'owner': 1, 'dice': 3}, '4': {'adjacent_areas': [3, 1, 22, 15, 9, 10], 'owner': 2, 'dice': 3}, '5': {'adjacent_areas': [3, 9, 16], 'owner': 3, 'dice': 3}, '6': {'adjacent_areas': [8, 11, 2, 7], 'owner': 1, 'dice': 3}, '7': {'adjacent_areas': [1, 2, 17, 6, 8], 'owner': 4, 'dice': 3}, '8': {'adjacent_areas': [6, 17, 7], 'owner': 4, 'dice': 3}, '9': {'adjacent_areas': [16, 5, 3, 4, 13], 'owner': 3, 'dice': 3}, '10': {'adjacent_areas': [4, 13, 15, 21], 'owner': 2, 'dice': 3}, '11': {'adjacent_areas': [6, 26, 18], 'owner': 1, 'dice': 3}, '12': {'adjacent_areas': [2, 14, 22, 24, 18], 'owner': 3, 'dice': 3}, '13': {'adjacent_areas': [10, 9, 21], 'owner': 3, 'dice': 3}, '14': {'adjacent_areas': [12, 20, 24, 22, 15], 'owner': 1, 'dice': 3}, '15': {'adjacent_areas': [10, 4, 14, 20, 22], 'owner': 4, 'dice': 3}, '16': {'adjacent_areas': [9, 5], 'owner': 1, 'dice': 3}, '17': {'adjacent_areas': [8, 7], 'owner': 4, 'dice': 3}, '18': {'adjacent_areas': [19, 11, 24, 28, 12], 'owner': 2, 'dice': 3}, '19': {'adjacent_areas': [18, 28, 23], 'owner': 2, 'dice': 3}, '20': {'adjacent_areas': [14, 15, 24], 'owner': 1, 'dice': 3}, '21': {'adjacent_areas': [10, 13], 'owner': 1, 'dice': 3}, '22': {'adjacent_areas': [12, 4, 1, 14, 2, 15], 'owner': 3, 'dice': 3}, '23': {'adjacent_areas': [29, 19, 25], 'owner': 4, 'dice': 3}, '24': {'adjacent_areas': [18, 12, 28, 14, 20], 'owner': 2, 'dice': 3}, '25': {'adjacent_areas': [27, 23], 'owner': 4, 'dice': 3}, '26': {'adjacent_areas': [11], 'owner': 2, 'dice': 3}, '27': {'adjacent_areas': [25], 'owner': 4, 'dice': 3}, '28': {'adjacent_areas': [19, 18, 24], 'owner': 3, 'dice': 3}, '29': {'adjacent_areas': [23], 'owner': 1, 'dice': 3}}, 'score': {'1': 2, '2': 3, '4': 3, '3': 3}, 'type': 'game_start', 'player': 2, 'no_players': 4, 'current_player': 1, 'board': {'1': {'hexes': [[9, 5], [10, 6], [7, 5], [10, 4], [8, 6], [8, 4], [11, 5], [13, 5], [12, 4], [6, 6], [4, 6], [9, 7], [6, 4], [8, 8], [12, 6], [7, 7]], 'neighbours': [22, 4, 3, 7, 2]}, '2': {'hexes': [[2, 4], [0, 4], [1, 5], [4, 4], [3, 3], [1, 3], [3, 5], [-1, 3], [2, 2], [-2, 4], [2, 6], [-3, 3], [-2, 2], [0, 2]], 'neighbours': [6, 1, 22, 12, 7]}, '3': {'hexes': [[14, 8], [15, 7], [12, 8], [16, 8], [13, 7], [15, 9], [13, 9], [17, 7], [14, 6], [18, 8], [17, 9], [16, 10], [19, 9]], 'neighbours': [4, 1, 9, 5]}, '4': {'hexes': [[16, 4], [17, 5], [17, 3], [18, 4], [15, 5], [15, 3], [14, 4], [16, 2], [15, 1], [13, 3], [18, 6], [18, 2], [17, 1], [16, 6], [20, 4], [18, 0], [11, 3], [19, 1], [19, 5], [19, 3]], 'neighbours': [3, 1, 22, 15, 9, 10]}, '5': {'hexes': [[19, 11], [17, 11], [21, 11], [20, 12], [20, 10], [18, 10], [18, 12], [16, 12], [21, 9], [22, 12], [15, 11], [22, 10], [23, 9]], 'neighbours': [3, 9, 16]}, '6': {'hexes': [[-4, 6], [-2, 6], [-5, 7], [-5, 5], [-3, 5], [-6, 6], [-3, 7], [-4, 4], [-1, 5], [-7, 7], [-5, 3], [0, 6], [-6, 4]], 'neighbours': [8, 11, 2, 7]}, '7': {'hexes': [[4, 8], [5, 9], [3, 9], [2, 8], [5, 7], [6, 8], [3, 7], [4, 10], [2, 10], [5, 11], [1, 9], [1, 7], [3, 11], [7, 9], [0, 10], [6, 10]], 'neighbours': [1, 2, 17, 6, 8]}, '8': {'hexes': [[-5, 9], [-4, 8], [-4, 10], [-7, 9], [-6, 8], [-3, 9], [-6, 10], [-8, 10], [-2, 8], [-10, 10], [-2, 10], [-8, 8]], 'neighbours': [6, 17, 7]}, '9': {'hexes': [[23, 7], [25, 7], [22, 6], [21, 7], [24, 6], [24, 8], [22, 8], [23, 5], [19, 7], [20, 8], [27, 7], [21, 5], [20, 6], [25, 5], [27, 5], [26, 8], [22, 4], [26, 6]], 'neighbours': [16, 5, 3, 4, 13]}, '10': {'hexes': [[22, 0], [23, -1], [21, 1], [20, 0], [21, -1], [24, 0], [23, 1], [19, -1], [22, -2], [24, 2], [24, -2], [26, -2], [23, -3], [21, -3], [25, -3], [20, -2], [25, -1]], 'neighbours': [4, 13, 15, 21]}, '11': {'hexes': [[-9, 3], [-8, 4], [-8, 2], [-10, 2], [-10, 4], [-7, 3], [-11, 3], [-9, 1], [-7, 5], [-12, 2], [-14, 2], [-7, 1], [-9, 5]], 'neighbours': [6, 26, 18]}, '12': {'hexes': [[2, 0], [1, 1], [4, 0], [3, 1], [1, -1], [3, -1], [0, 0], [-1, -1], [-1, 1], [2, -2], [-3, -1], [-2, 0], [5, 1]], 'neighbours': [2, 14, 22, 24, 18]}, '13': {'hexes': [[27, 3], [26, 2], [29, 3], [25, 3], [28, 2], [28, 4], [26, 4], [29, 5], [25, 1], [31, 3], [31, 5], [26, 0], [27, 1], [30, 4]], 'neighbours': [10, 9, 21]}, '14': {'hexes': [[6, -2], [4, -2], [5, -3], [8, -2], [7, -1], [5, -1], [7, -3], [3, -3], [8, 0], [6, -4], [6, 0], [9, -3], [9, -1], [4, -4], [11, -1], [2, -4], [10, -2]], 'neighbours': [12, 20, 24, 22, 15]}, '15': {'hexes': [[16, -2], [15, -1], [18, -2], [14, -2], [17, -1], [17, -3], [15, -3], [16, 0], [16, -4], [13, -1], [15, -5], [14, -4], [14, 0], [16, -6], [17, -7], [18, -4], [19, -3], [12, -2], [17, -5]], 'neighbours': [10, 4, 14, 20, 22]}, '16': {'hexes': [[28, 10], [29, 9], [27, 9], [26, 10], [30, 10], [29, 11], [27, 11], [28, 8], [25, 9], [30, 8], [25, 11], [24, 10], [31, 9], [29, 7], [31, 7]], 'neighbours': [9, 5]}, '17': {'hexes': [[-6, 12], [-4, 12], [-8, 12], [-7, 11], [-7, 13], [-5, 11], [-5, 13], [-9, 11], [-3, 11], [-1, 11], [-11, 11], [-2, 12], [-9, 13], [1, 11], [-10, 12], [2, 12], [-12, 12], [-13, 13], [0, 12], [-11, 13]], 'neighbours': [8, 7]}, '18': {'hexes': [[-9, -1], [-11, -1], [-8, -2], [-7, -1], [-8, 0], [-10, -2], [-10, 0], [-7, -3], [-9, -3], [-10, -4], [-6, -2], [-13, -1], [-5, -1]], 'neighbours': [19, 11, 24, 28, 12]}, '19': {'hexes': [[-16, -2], [-14, -2], [-18, -2], [-15, -3], [-17, -1], [-17, -3], [-15, -1], [-16, -4], [-19, -1], [-18, 0], [-14, 0], [-16, 0], [-21, -1], [-12, -2]], 'neighbours': [18, 28, 23]}, '20': {'hexes': [[9, -5], [7, -5], [10, -6], [8, -6], [11, -5], [10, -4], [8, -4], [5, -5], [9, -7], [6, -6], [7, -7], [4, -6], [13, -5], [11, -7], [3, -5], [12, -6], [2, -6], [14, -6]], 'neighbours': [14, 15, 24]}, '21': {'hexes': [[27, -5], [25, -5], [29, -5], [28, -6], [28, -4], [26, -4], [26, -6], [29, -3], [27, -3], [28, -2], [30, -2], [27, -1], [28, 0], [29, -1]], 'neighbours': [10, 13]}, '22': {'hexes': [[8, 2], [6, 2], [9, 3], [10, 2], [9, 1], [7, 3], [7, 1], [11, 1], [10, 0], [4, 2], [13, 1], [5, 3], [12, 2]], 'neighbours': [12, 4, 1, 14, 2, 15]}, '23': {'hexes': [[-25, -1], [-26, 0], [-26, -2], [-24, 0], [-27, -1], [-23, -1], [-24, -2], [-25, -3], [-27, -3], [-28, -2], [-26, -4], [-27, -5]], 'neighbours': [29, 19, 25]}, '24': {'hexes': [[-3, -3], [-1, -3], [-5, -3], [-2, -4], [-4, -2], [-2, -2], [-4, -4], [-5, -5], [-6, -4], [-8, -4], [1, -3], [0, -2], [-1, -5], [-3, -5], [0, -4], [-4, -6], [1, -5]], 'neighbours': [18, 12, 28, 14, 20]}, '25': {'hexes': [[-25, -7], [-27, -7], [-24, -6], [-23, -7], [-26, -8], [-26, -6], [-24, -8], [-25, -9], [-28, -8], [-23, -5], [-30, -8], [-21, -7], [-22, -4], [-22, -8], [-22, -6]], 'neighbours': [27, 23]}, '26': {'hexes': [[-16, 4], [-17, 3], [-15, 3], [-15, 5], [-17, 5], [-14, 4], [-18, 4], [-13, 3], [-18, 2], [-13, 5], [-12, 6], [-19, 5], [-13, 7], [-12, 4], [-19, 3], [-14, 6]], 'neighbours': [11]}, '27': {'hexes': [[-30, -10], [-29, -9], [-32, -10], [-31, -9], [-28, -10], [-31, -11], [-29, -11], [-28, -12], [-27, -11], [-27, -9], [-32, -8], [-26, -10], [-25, -11]], 'neighbours': [25]}, '28': {'hexes': [[-14, -6], [-13, -7], [-16, -6], [-13, -5], [-15, -7], [-12, -6], [-15, -5], [-10, -6], [-14, -4], [-14, -8], [-17, -5], [-11, -5], [-19, -5], [-9, -5], [-12, -8], [-11, -7]], 'neighbours': [19, 18, 24]}, '29': {'hexes': [[-26, 2], [-27, 1], [-28, 2], [-25, 3], [-24, 2], [-27, 3], [-25, 1], [-24, 4], [-30, 2], [-29, 1], [-28, 0], [-23, 3], [-26, 4], [-25, 5], [-23, 5], [-27, 5]], 'neighbours': [23]}}, 'order': [1, 2, 3, 4]}
+
+INFO:CLIENT:This is player name 2, the players order is [1, 2, 3, 4]
+DEBUG:root:Starting clock with 10.000s left
+DEBUG:root:Stopped clock, now with 10.000s left
+DEBUG:AI:Received message type game_state.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 10.000s left
+DEBUG:AI:Turn 1 begin....
+DEBUG:AI:Attack prob: 0.97299383
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.125
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.27586206896551724
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.27586206896551724
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.27586206896551724
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.27586206896551724
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.27586206896551724
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.27586206896551724
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.27586206896551724
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.27586206896551724
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.2413793103448276
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.27586206896551724
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.27586206896551724
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.27586206896551724
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.27586206896551724
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.2413793103448276
+DEBUG:AI:Defender dice proportion: 0.27586206896551724
+DEBUG:AI:Attacker area proportion: 0.2413793103448276
+DEBUG:AI:Defender area proportion: 0.27586206896551724
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 1
+DEBUG:AI:Attacking
+DEBUG:root:Stopped clock, now with 10.236s left
+DEBUG:AI:Sending battle message 2->6
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 10.236s left
+DEBUG:AI:Turn 2 begin....
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.26744186046511625
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 5
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.03587963
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.26744186046511625
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.26744186046511625
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.26744186046511625
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.2441860465116279
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.26744186046511625
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.26744186046511625
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.2441860465116279
+DEBUG:AI:Defender dice proportion: 0.26744186046511625
+DEBUG:AI:Attacker area proportion: 0.27586206896551724
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 1
+DEBUG:AI:Attacking
+DEBUG:root:Stopped clock, now with 10.474s left
+DEBUG:AI:Sending battle message 4->3
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 10.474s left
+DEBUG:AI:Turn 3 begin....
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.03587963
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.24096385542168675
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.24096385542168675
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.24096385542168675
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.25301204819277107
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.24096385542168675
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.24096385542168675
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.25301204819277107
+DEBUG:AI:Defender dice proportion: 0.24096385542168675
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 1
+DEBUG:AI:Attacking
+DEBUG:root:Stopped clock, now with 10.713s left
+DEBUG:AI:Sending battle message 3->1
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 10.713s left
+DEBUG:AI:Turn 4 begin....
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.25609756097560976
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.03587963
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.24390243902439024
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.25609756097560976
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.25609756097560976
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.25609756097560976
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.24390243902439024
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.24390243902439024
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.25609756097560976
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.25609756097560976
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.25609756097560976
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.25609756097560976
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.25609756097560976
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.25609756097560976
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.24390243902439024
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.24390243902439024
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.24390243902439024
+DEBUG:AI:Defender dice proportion: 0.24390243902439024
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 1
+DEBUG:AI:Attacking
+DEBUG:root:Stopped clock, now with 10.954s left
+DEBUG:AI:Sending battle message 6->8
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 10.954s left
+DEBUG:AI:Turn 5 begin....
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.25925925925925924
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.25925925925925924
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.24691358024691357
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.24691358024691357
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.25925925925925924
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.25925925925925924
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.25925925925925924
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.25925925925925924
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.25925925925925924
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.25925925925925924
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.24691358024691357
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.24691358024691357
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.2345679012345679
+DEBUG:AI:Defender dice proportion: 0.24691358024691357
+DEBUG:AI:Attacker area proportion: 0.3103448275862069
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 1
+DEBUG:AI:Attacking
+DEBUG:root:Stopped clock, now with 11.197s left
+DEBUG:AI:Sending battle message 10->13
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 11.197s left
+DEBUG:AI:Turn 6 begin....
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.23076923076923078
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.2564102564102564
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.2564102564102564
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.23076923076923078
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.23076923076923078
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.6666666666666666
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.23076923076923078
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.2692307692307692
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.23076923076923078
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.6666666666666666
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.23076923076923078
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.2564102564102564
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.2564102564102564
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.24358974358974358
+DEBUG:AI:Defender dice proportion: 0.2564102564102564
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 1
+DEBUG:AI:Attacking
+DEBUG:root:Stopped clock, now with 11.440s left
+DEBUG:AI:Sending battle message 13->9
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 11.440s left
+DEBUG:AI:Turn 7 begin....
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.23376623376623376
+DEBUG:AI:Defender dice proportion: 0.2597402597402597
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.23376623376623376
+DEBUG:AI:Defender dice proportion: 0.23376623376623376
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.23376623376623376
+DEBUG:AI:Defender dice proportion: 0.23376623376623376
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.6666666666666666
+DEBUG:AI:sousedi : 3
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.23376623376623376
+DEBUG:AI:Defender dice proportion: 0.23376623376623376
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.23376623376623376
+DEBUG:AI:Defender dice proportion: 0.2727272727272727
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.23376623376623376
+DEBUG:AI:Defender dice proportion: 0.23376623376623376
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.6666666666666666
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.23376623376623376
+DEBUG:AI:Defender dice proportion: 0.23376623376623376
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.23376623376623376
+DEBUG:AI:Defender dice proportion: 0.2597402597402597
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.23376623376623376
+DEBUG:AI:Defender dice proportion: 0.2597402597402597
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.23376623376623376
+DEBUG:AI:Defender dice proportion: 0.2597402597402597
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 1
+DEBUG:AI:Attacking
+DEBUG:root:Stopped clock, now with 11.685s left
+DEBUG:AI:Sending battle message 18->11
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 11.685s left
+DEBUG:AI:Turn 8 begin....
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.21333333333333335
+DEBUG:AI:Defender dice proportion: 0.24
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.21333333333333335
+DEBUG:AI:Defender dice proportion: 0.28
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.2413793103448276
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.21333333333333335
+DEBUG:AI:Defender dice proportion: 0.24
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.6666666666666666
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.21333333333333335
+DEBUG:AI:Defender dice proportion: 0.24
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.21333333333333335
+DEBUG:AI:Defender dice proportion: 0.26666666666666666
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.21333333333333335
+DEBUG:AI:Defender dice proportion: 0.26666666666666666
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.21333333333333335
+DEBUG:AI:Defender dice proportion: 0.26666666666666666
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 1
+DEBUG:AI:Attacking
+DEBUG:root:Stopped clock, now with 11.931s left
+DEBUG:AI:Sending battle message 19->28
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 11.931s left
+DEBUG:AI:Turn 9 begin....
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.1917808219178082
+DEBUG:AI:Defender dice proportion: 0.2465753424657534
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.6666666666666666
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.1917808219178082
+DEBUG:AI:Defender dice proportion: 0.2465753424657534
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.4535751
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.1917808219178082
+DEBUG:AI:Defender dice proportion: 0.273972602739726
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.1917808219178082
+DEBUG:AI:Defender dice proportion: 0.273972602739726
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 4
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.1917808219178082
+DEBUG:AI:Defender dice proportion: 0.273972602739726
+DEBUG:AI:Attacker area proportion: 0.3448275862068966
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 1
+DEBUG:AI:Attacking
+DEBUG:root:Stopped clock, now with 12.178s left
+DEBUG:AI:Sending battle message 24->12
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 12.178s left
+DEBUG:AI:Turn 10 begin....
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2
+DEBUG:AI:Defender dice proportion: 0.2857142857142857
+DEBUG:AI:Attacker area proportion: 0.3793103448275862
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 0.5
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.15200617
+DEBUG:AI:Attacker max regio flag: 1
+DEBUG:AI:Defender max regio flag: 1
+DEBUG:AI:Attacker regio occupancy: 0.25
+DEBUG:AI:Defender regio occupancy: 0.375
+DEBUG:AI:Attacker dice proportion: 0.2
+DEBUG:AI:Defender dice proportion: 0.21428571428571427
+DEBUG:AI:Attacker area proportion: 0.3793103448275862
+DEBUG:AI:Defender area proportion: 0.1724137931034483
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 2
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.2
+DEBUG:AI:Defender dice proportion: 0.2857142857142857
+DEBUG:AI:Attacker area proportion: 0.3793103448275862
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 1
+DEBUG:AI:Attacking
+DEBUG:root:Stopped clock, now with 12.426s left
+DEBUG:AI:Sending battle message 12->14
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 12.426s left
+DEBUG:AI:Turn 11 begin....
+DEBUG:AI:Attack prob: 0.19170096
+DEBUG:AI:Attacker max regio flag: 0
+DEBUG:AI:Defender max regio flag: 0
+DEBUG:AI:Attacker regio occupancy: 0.375
+DEBUG:AI:Defender regio occupancy: 0.5
+DEBUG:AI:Attacker dice proportion: 0.18840579710144928
+DEBUG:AI:Defender dice proportion: 0.2898550724637681
+DEBUG:AI:Attacker area proportion: 0.3793103448275862
+DEBUG:AI:Defender area proportion: 0.20689655172413793
+DEBUG:AI:Reserve: 0
+DEBUG:AI:Enemy score after attack: 1.0
+DEBUG:AI:sousedi : 1
+DEBUG:AI:Attacking
+DEBUG:root:Stopped clock, now with 12.675s left
+DEBUG:AI:Sending battle message 26->11
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 12.675s left
+DEBUG:AI:Turn 12 begin....
+DEBUG:AI:Score 6
+DEBUG:AI:Zustatek kostek 71
+DEBUG:root:Stopped clock, now with 12.925s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 12.925s left
+DEBUG:AI:Turn 13 begin....
+DEBUG:AI:Score 1
+DEBUG:AI:Zustatek kostek 6
+DEBUG:root:Stopped clock, now with 13.175s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type game_end.
+INFO:AI:Player 1 has won
