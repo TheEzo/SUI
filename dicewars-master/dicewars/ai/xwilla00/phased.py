@@ -99,7 +99,7 @@ class FinalAI:
 
         move_prob = best_move[2]
 
-        if move_prob > 0.55: #0.54 5 
+        if (nb_moves_this_turn < 2 and move_prob > 0.49) or (move_prob > 0.56): # 0.50  0.54 5 
             # self.logger.debug(f"Attacking: {self.t}, {best_move[2]}")
             return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
         else:
