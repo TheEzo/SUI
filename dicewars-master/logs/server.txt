@@ -1,0 +1,1 @@
+DEBUG:SERVER:Command line arguments: Namespace(address='127.0.0.1', area_assignment='orig', board=254430, debug='DEBUG', dice_assignment='flat', fixed=42, number_of_players=4, order=['xwilla00 (AI)', 'xlogin00 (AI)', 'dt.wpm_c (AI)', 'dt.rand (AI)'], ownership=42, port=5005, strength=42)

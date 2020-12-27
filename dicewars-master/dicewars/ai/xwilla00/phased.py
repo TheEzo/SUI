@@ -19,15 +19,45 @@ class FinalAI:
         self.logger = logging.getLogger('AI')
         self.nn = NN()
         self.adjacent_areas_max = max_count_of_adjacen(board)
-
+        self.t = 0
         # self.reserve = 0
+        self.attacked = None
+        self.lost = 0
+        self.eps = 0
+        self.two_players = False
 
     def ai_turn(self, board, nb_moves_this_turn, nb_turns_this_game, time_left):
         """AI agent's turn
         """
 
+        alive = board.nb_players_alive()
+
+        if nb_moves_this_turn == 0:
+            self.t = 0
+            self.attacked = None
+
+        if alive == 2 and self.two_players is False:
+            self.two_players = True
+            self.lost = 0
+            self.eps = 0
+
+        if self.attacked is not None:
+            new_owner = board.areas[str(self.attacked)].get_owner_name()
+
+            if new_owner == self.player_name:
+                if self.lost > 0:
+                    self.lost -= 1
+            else:
+                self.lost += 1
+
+                if self.lost > 1 and self.eps < 0.7:
+                    self.eps += 0.1
+                    self.lost = 0
+
+            self.attacked = None
+
         all_moves = list(possible_attacks(board, self.player_name))
-        if not all_moves and nb_moves_this_turn < 3:
+        if not all_moves and self.t < 3:
             all_moves = list(possible_attacks(board, self.player_name, True))
 
         if len(all_moves) == 0:
@@ -61,7 +91,7 @@ class FinalAI:
 
         all_moves.sort(key=lambda tup: (tup[0].get_dice() * tup[0].get_dice()) - tup[1].get_dice(), reverse=True)
 
-        if nb_moves_this_turn > 5:
+        if self.t > 5:
             for move in all_moves:
                 nn_input_vec = self.get_nn_vector(board, move)
                 attack_value = self.nn.eval(nn_input_vec)[0][0]
@@ -98,18 +128,33 @@ class FinalAI:
         # self.logger.debug(f'evaluated: {best_move[2]}')
 
         move_prob = best_move[2]
+        
+        if alive > 2:
+            #if (self.t < 2 and move_prob > 0.53) or (move_prob > 0.56): # 53, 56
+            if move_prob > (0.52 + self.eps): #58 vyhra
+                self.t += 1
+                self.attacked = best_move[1].get_owner_name()
+                return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
+            else:
+                attacker_dice = best_move[0].get_dice()
+                defender_dice = best_move[1].get_dice()
 
-        if (nb_moves_this_turn < 2 and move_prob > 0.49) or (move_prob > 0.56): # 0.50  0.54 5 
-            # self.logger.debug(f"Attacking: {self.t}, {best_move[2]}")
-            return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
+                if attacker_dice >= 7 and attacker_dice >= defender_dice: # 7 -> prohra o 1, python3 ./scripts/dicewars-tournament.py -r -g 4 -n 50 -b 44125 -s 1258401 -l ./logs --debug
+                    self.t += 1
+                    return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
         else:
-            attacker_dice = best_move[0].get_dice()
-            defender_dice = best_move[1].get_dice()
+            # if (self.t < 2 and move_prob > 0.45) or (move_prob > 0.53): # 45, 53
+            if move_prob > (0.47 + self.eps): # 45, 53
+                self.t += 1
+                self.attacked = best_move[1].get_owner_name()
+                return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
+            else:
+                attacker_dice = best_move[0].get_dice()
+                defender_dice = best_move[1].get_dice()
 
-            # and move_prob > 0.4
-            
-            if attacker_dice >= 7 and attacker_dice >= defender_dice:
-               return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
+                if attacker_dice >= 5 and attacker_dice >= defender_dice:
+                    self.t += 1
+                    return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
             
 
         # self.logger.debug("Nothing to do")
