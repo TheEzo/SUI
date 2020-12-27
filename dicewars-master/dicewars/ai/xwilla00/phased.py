@@ -48,11 +48,10 @@ class FinalAI:
                 if self.lost > 0:
                     self.lost -= 1
             else:
-                self.lost += 1
-
-                if self.lost > 1 and self.eps < 0.7:
+                if self.lost == 2 and self.eps < 0.7:
                     self.eps += 0.1
-                    self.lost = 0
+                else:
+                    self.lost += 1
 
             self.attacked = None
 
@@ -87,8 +86,6 @@ class FinalAI:
         if time_left < 0.3 or time_left / 0.05 < len(all_moves):
             return self.end_turn_command_and_reserv_calculation(board)
 
-        # moves_time_start = time.time()
-
         all_moves.sort(key=lambda tup: (tup[0].get_dice() * tup[0].get_dice()) - tup[1].get_dice(), reverse=True)
 
         if self.t > 5:
@@ -96,11 +93,7 @@ class FinalAI:
                 nn_input_vec = self.get_nn_vector(board, move)
                 attack_value = self.nn.eval(nn_input_vec)[0][0]
 
-                # self.logger.debug(f"nn_input_vec: {nn_input_vec}")
-                # self.logger.debug(f"attack_value: {attack_value}")
-
-                if attack_value > 0.65:  # 0.65
-                    # self.logger.debug(f"Attacking: {self.t}, {attack_value}")
+                if attack_value > 0.65:
                     return BattleCommand(move[0].get_name(), move[1].get_name())
 
             return self.end_turn_command_and_reserv_calculation(board)
@@ -109,29 +102,19 @@ class FinalAI:
                 nn_input_vec = self.get_nn_vector(board, move)
                 attack_value = self.nn.eval(nn_input_vec)[0][0]
 
-                # self.logger.debug(f"nn_input_vec: {nn_input_vec}")
-                # self.logger.debug(f"attack_value: {attack_value}")
-
                 if attack_value > 0.75:
-                    # self.logger.debug(f"Attacking: {self.t}, {attack_value}")
                     return BattleCommand(move[0].get_name(), move[1].get_name())
 
                 all_evaluated_moves.append((move[0], move[1], attack_value))
-
-        # moves_time_end = time.time()
-        # self.logger.debug(f"moves_time: {moves_time_end - moves_time_start}")
 
         maximum = max(m[2] for m in all_evaluated_moves)
         best_move = next(m for m in all_evaluated_moves if m[2] == maximum)
         all_evaluated_moves.sort(key=lambda tup: tup[2])
 
-        # self.logger.debug(f'evaluated: {best_move[2]}')
-
         move_prob = best_move[2]
         
         if alive > 2:
-            #if (self.t < 2 and move_prob > 0.53) or (move_prob > 0.56): # 53, 56
-            if move_prob > (0.52 + self.eps): #58 vyhra
+            if move_prob > (0.51 + self.eps):
                 self.t += 1
                 self.attacked = best_move[1].get_owner_name()
                 return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
@@ -139,12 +122,11 @@ class FinalAI:
                 attacker_dice = best_move[0].get_dice()
                 defender_dice = best_move[1].get_dice()
 
-                if attacker_dice >= 7 and attacker_dice >= defender_dice: # 7 -> prohra o 1, python3 ./scripts/dicewars-tournament.py -r -g 4 -n 50 -b 44125 -s 1258401 -l ./logs --debug
+                if attacker_dice >= 7 and attacker_dice >= defender_dice:
                     self.t += 1
                     return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
         else:
-            # if (self.t < 2 and move_prob > 0.45) or (move_prob > 0.53): # 45, 53
-            if move_prob > (0.47 + self.eps): # 45, 53
+            if move_prob > (0.46 + self.eps):
                 self.t += 1
                 self.attacked = best_move[1].get_owner_name()
                 return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
@@ -156,8 +138,6 @@ class FinalAI:
                     self.t += 1
                     return BattleCommand(best_move[0].get_name(), best_move[1].get_name())
             
-
-        # self.logger.debug("Nothing to do")
         return self.end_turn_command_and_reserv_calculation(board)
 
     def end_turn_command_and_reserv_calculation(self, board):

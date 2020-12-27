@@ -1,0 +1,545 @@
+DEBUG:CLIENT:Started socket daemon.
+DEBUG:CLIENT:Received message: {'areas': {'1': {'adjacent_areas': [13, 3, 2], 'owner': 3, 'dice': 3}, '2': {'adjacent_areas': [1, 4], 'owner': 2, 'dice': 3}, '3': {'adjacent_areas': [13, 1, 16], 'owner': 1, 'dice': 3}, '4': {'adjacent_areas': [5, 2, 6, 14], 'owner': 2, 'dice': 3}, '5': {'adjacent_areas': [15, 4, 8, 14], 'owner': 3, 'dice': 3}, '6': {'adjacent_areas': [13, 7, 4, 10, 14], 'owner': 1, 'dice': 3}, '7': {'adjacent_areas': [6, 20, 10, 12], 'owner': 4, 'dice': 3}, '8': {'adjacent_areas': [9, 5, 15], 'owner': 4, 'dice': 3}, '9': {'adjacent_areas': [8, 11], 'owner': 3, 'dice': 3}, '10': {'adjacent_areas': [12, 7, 16, 19, 13, 6, 23], 'owner': 2, 'dice': 3}, '11': {'adjacent_areas': [15, 9, 21, 28], 'owner': 1, 'dice': 3}, '12': {'adjacent_areas': [7, 10, 29, 19], 'owner': 3, 'dice': 3}, '13': {'adjacent_areas': [1, 10, 3, 6], 'owner': 3, 'dice': 3}, '14': {'adjacent_areas': [20, 6, 4, 5, 17], 'owner': 1, 'dice': 3}, '15': {'adjacent_areas': [11, 5, 28, 8], 'owner': 4, 'dice': 3}, '16': {'adjacent_areas': [3, 10, 23], 'owner': 1, 'dice': 3}, '17': {'adjacent_areas': [26, 18, 14, 20], 'owner': 4, 'dice': 3}, '18': {'adjacent_areas': [17, 28, 22], 'owner': 2, 'dice': 3}, '19': {'adjacent_areas': [23, 10, 12, 24], 'owner': 2, 'dice': 3}, '20': {'adjacent_areas': [7, 29, 26, 14, 17], 'owner': 1, 'dice': 3}, '21': {'adjacent_areas': [11, 28], 'owner': 1, 'dice': 3}, '22': {'adjacent_areas': [28, 18, 25], 'owner': 3, 'dice': 3}, '23': {'adjacent_areas': [19, 16, 10], 'owner': 4, 'dice': 3}, '24': {'adjacent_areas': [19], 'owner': 2, 'dice': 3}, '25': {'adjacent_areas': [22], 'owner': 4, 'dice': 3}, '26': {'adjacent_areas': [17, 20, 27], 'owner': 2, 'dice': 3}, '27': {'adjacent_areas': [26], 'owner': 4, 'dice': 3}, '28': {'adjacent_areas': [15, 18, 22, 11, 21], 'owner': 3, 'dice': 3}, '29': {'adjacent_areas': [20, 12], 'owner': 1, 'dice': 3}}, 'score': {'4': 2, '1': 4, '3': 2, '2': 3}, 'type': 'game_start', 'player': 1, 'no_players': 4, 'current_player': 1, 'board': {'1': {'hexes': [[3, 13], [5, 13], [4, 12], [2, 12], [1, 13], [1, 11], [7, 13], [0, 12], [-2, 12], [-4, 12], [2, 10], [-3, 11], [-1, 13], [3, 11], [-1, 11]], 'neighbours': [13, 3, 2]}, '2': {'hexes': [[-8, 12], [-9, 11], [-10, 12], [-7, 13], [-9, 13], [-7, 11], [-6, 12], [-8, 10], [-11, 13], [-7, 9], [-10, 10], [-5, 13], [-6, 8]], 'neighbours': [1, 4]}, '3': {'hexes': [[9, 11], [11, 11], [7, 11], [10, 12], [8, 12], [10, 10], [8, 10], [12, 12], [11, 13], [14, 12], [11, 9], [12, 10], [13, 11]], 'neighbours': [13, 1, 16]}, '4': {'hexes': [[-8, 6], [-9, 5], [-10, 6], [-9, 7], [-6, 6], [-7, 7], [-7, 5], [-6, 4], [-5, 5], [-5, 7], [-5, 3], [-8, 4], [-11, 7], [-11, 5], [-4, 4], [-4, 6], [-3, 5], [-10, 8]], 'neighbours': [5, 2, 6, 14]}, '5': {'hexes': [[-13, 3], [-15, 3], [-11, 3], [-12, 4], [-14, 2], [-12, 2], [-14, 4], [-16, 4], [-13, 5], [-10, 2], [-17, 5], [-15, 5], [-14, 6], [-10, 4], [-12, 6], [-16, 6], [-13, 1], [-9, 1], [-11, 1]], 'neighbours': [15, 4, 8, 14]}, '6': {'hexes': [[1, 5], [3, 5], [2, 4], [0, 4], [0, 6], [-1, 5], [2, 6], [-2, 6], [5, 5], [-1, 7], [1, 7], [-2, 4], [4, 4], [-3, 7], [7, 5], [-3, 3]], 'neighbours': [13, 7, 4, 10, 14]}, '7': {'hexes': [[4, 2], [5, 3], [6, 2], [5, 1], [2, 2], [3, 1], [3, 3], [7, 1], [6, 4], [7, 3], [1, 3], [8, 4], [1, 1], [9, 3], [6, 0], [9, 1], [9, 5], [8, 2]], 'neighbours': [6, 20, 10, 12]}, '8': {'hexes': [[-18, 8], [-19, 9], [-16, 8], [-20, 8], [-17, 9], [-19, 7], [-17, 7], [-21, 9], [-20, 10], [-22, 10], [-18, 6], [-15, 9], [-18, 10], [-16, 10], [-15, 7], [-20, 6]], 'neighbours': [9, 5, 15]}, '9': {'hexes': [[-24, 8], [-23, 9], [-25, 9], [-26, 8], [-23, 7], [-22, 8], [-25, 7], [-24, 10], [-27, 9], [-22, 6], [-21, 7], [-26, 10], [-25, 11], [-28, 10], [-27, 7], [-26, 12], [-23, 11], [-27, 11]], 'neighbours': [8, 11]}, '10': {'hexes': [[13, 5], [12, 4], [11, 5], [14, 6], [15, 5], [14, 4], [12, 6], [11, 7], [10, 4], [9, 7], [8, 8], [15, 3], [13, 7], [10, 6], [8, 6], [16, 6]], 'neighbours': [12, 7, 16, 19, 13, 6, 23]}, '11': {'hexes': [[-24, 4], [-22, 4], [-23, 5], [-25, 5], [-25, 3], [-26, 4], [-23, 3], [-24, 2], [-27, 3], [-28, 4], [-20, 4], [-26, 2], [-29, 5], [-27, 5], [-23, 1]], 'neighbours': [15, 9, 21, 28]}, '12': {'hexes': [[13, 1], [15, 1], [11, 1], [14, 0], [14, 2], [12, 2], [12, 0], [10, 2], [10, 0], [16, 2], [11, 3], [11, -1], [13, 3], [13, -1], [17, 1], [12, -2], [18, 0], [16, 0]], 'neighbours': [7, 10, 29, 19]}, '13': {'hexes': [[5, 9], [3, 9], [4, 8], [6, 8], [4, 10], [6, 10], [7, 9], [1, 9], [5, 7], [4, 6], [0, 10], [6, 6]], 'neighbours': [1, 10, 3, 6]}, '14': {'hexes': [[-5, 1], [-6, 0], [-3, 1], [-4, 2], [-7, 1], [-4, 0], [-6, 2], [-8, 0], [-2, 2], [-7, -1], [-10, 0], [-5, -1], [-9, -1]], 'neighbours': [20, 6, 4, 5, 17]}, '15': {'hexes': [[-20, 2], [-18, 2], [-19, 1], [-22, 2], [-21, 3], [-21, 1], [-19, 3], [-17, 3], [-16, 2], [-18, 4], [-17, 1], [-15, 1], [-14, 0], [-18, 0], [-20, 0], [-22, 0], [-21, -1], [-19, 5], [-16, 0]], 'neighbours': [11, 5, 28, 8]}, '16': {'hexes': [[15, 9], [13, 9], [17, 9], [14, 8], [16, 10], [14, 10], [16, 8], [18, 8], [19, 9], [12, 8], [18, 10], [10, 8], [15, 7], [20, 8]], 'neighbours': [3, 10, 23]}, '17': {'hexes': [[-9, -3], [-8, -4], [-10, -4], [-7, -3], [-11, -3], [-10, -2], [-8, -2], [-6, -2], [-13, -3], [-6, -4], [-12, -2], [-4, -2], [-5, -3]], 'neighbours': [26, 18, 14, 20]}, '18': {'hexes': [[-15, -5], [-16, -4], [-16, -6], [-14, -4], [-17, -5], [-13, -5], [-14, -6], [-15, -7], [-12, -6], [-18, -4], [-17, -3], [-15, -3], [-14, -2], [-11, -5], [-18, -6], [-13, -7], [-17, -7]], 'neighbours': [17, 28, 22]}, '19': {'hexes': [[19, 5], [20, 6], [17, 5], [18, 4], [21, 5], [18, 6], [20, 4], [16, 4], [19, 3], [17, 3], [18, 2], [21, 3], [22, 4], [22, 2], [20, 2]], 'neighbours': [23, 10, 12, 24]}, '20': {'hexes': [[3, -1], [5, -1], [2, -2], [1, -1], [4, -2], [2, 0], [4, 0], [1, -3], [0, 0], [2, -4], [3, -3], [0, -2], [-1, -1], [-2, 0], [-2, -2]], 'neighbours': [7, 29, 26, 14, 17]}, '21': {'hexes': [[-30, 2], [-29, 3], [-28, 2], [-31, 3], [-29, 1], [-32, 2], [-31, 1], [-32, 0], [-27, 1], [-28, 0], [-26, 0], [-30, 0]], 'neighbours': [11, 28]}, '22': {'hexes': [[-22, -6], [-23, -5], [-21, -7], [-21, -5], [-24, -6], [-20, -6], [-23, -7], [-19, -7], [-18, -8], [-20, -8], [-21, -9], [-25, -5], [-20, -10], [-16, -8], [-19, -9], [-24, -4]], 'neighbours': [28, 18, 25]}, '23': {'hexes': [[23, 7], [24, 8], [24, 6], [22, 6], [22, 8], [25, 7], [21, 7], [25, 9], [19, 7], [17, 7], [23, 5], [23, 9], [26, 8], [27, 7], [24, 4], [28, 8], [26, 10], [27, 9]], 'neighbours': [19, 16, 10]}, '24': {'hexes': [[24, 0], [23, -1], [22, 0], [26, 0], [25, 1], [23, 1], [25, -1], [27, 1], [21, -1], [28, 2], [24, 2], [24, -2], [28, 0], [30, 0], [27, -1], [26, -2], [25, -3], [29, 1], [26, 2]], 'neighbours': [19]}, '25': {'hexes': [[-29, -5], [-31, -5], [-30, -6], [-28, -6], [-30, -4], [-27, -5], [-28, -4], [-32, -6], [-29, -7], [-32, -4], [-29, -3], [-26, -4]], 'neighbours': [22]}, '26': {'hexes': [[-3, -5], [-1, -5], [-2, -4], [-4, -4], [-5, -5], [-4, -6], [-2, -6], [-3, -3], [-6, -6], [-5, -7], [-3, -7], [-4, -8], [-2, -8], [-7, -5], [-1, -7], [0, -6], [0, -4]], 'neighbours': [17, 20, 27]}, '27': {'hexes': [[1, -9], [0, -10], [-1, -9], [2, -10], [0, -8], [2, -8], [3, -9], [3, -11], [1, -7], [4, -10], [4, -12], [6, -12], [1, -11], [2, -12], [3, -13], [5, -11]], 'neighbours': [26]}, '28': {'hexes': [[-21, -3], [-20, -2], [-20, -4], [-23, -3], [-19, -3], [-22, -4], [-22, -2], [-24, -2], [-19, -5], [-23, -1], [-18, -2], [-24, 0], [-16, -2], [-25, -1], [-19, -1]], 'neighbours': [15, 18, 22, 11, 21]}, '29': {'hexes': [[7, -3], [6, -2], [9, -3], [8, -4], [6, -4], [5, -3], [8, -2], [9, -5], [4, -4], [11, -5], [9, -1], [7, -5], [10, -2], [10, -4]], 'neighbours': [20, 12]}}, 'order': [1, 2, 3, 4]}
+
+INFO:CLIENT:This is player name 1, the players order is [1, 2, 3, 4]
+DEBUG:root:Starting clock with 10.000s left
+DEBUG:root:Stopped clock, now with 10.000s left
+DEBUG:AI:Received message type game_state.
+DEBUG:root:Starting clock with 10.000s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [6, 7, 0.03610845816347874]
+DEBUG:root:Stopped clock, now with 10.248s left
+DEBUG:AI:Sending battle message 6->7
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 10.248s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [11, 15, 0.03819896225121111]
+DEBUG:root:Stopped clock, now with 10.496s left
+DEBUG:AI:Sending battle message 11->15
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 10.496s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [14, 17, 0.04008821449368449]
+DEBUG:root:Stopped clock, now with 10.743s left
+DEBUG:AI:Sending battle message 14->17
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 10.743s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [16, 23, 0.04255334263212074]
+DEBUG:root:Stopped clock, now with 10.992s left
+DEBUG:AI:Sending battle message 16->23
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 10.992s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [20, 7, 0.04550254386124841]
+DEBUG:root:Stopped clock, now with 11.241s left
+DEBUG:AI:Sending battle message 20->7
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 11.241s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Don't want to attack anymore.
+DEBUG:root:Stopped clock, now with 11.489s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 11.489s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [15, 8, 0.049574204721380966]
+DEBUG:root:Stopped clock, now with 11.737s left
+DEBUG:AI:Sending battle message 15->8
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 11.737s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [20, 7, 0.05928436741023546]
+DEBUG:root:Stopped clock, now with 11.986s left
+DEBUG:AI:Sending battle message 20->7
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 11.986s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [3, 16, 0.04954458884953317]
+DEBUG:root:Stopped clock, now with 12.235s left
+DEBUG:AI:Sending battle message 3->16
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 12.235s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [16, 10, 0.060269710455368886]
+DEBUG:root:Stopped clock, now with 12.484s left
+DEBUG:AI:Sending battle message 16->10
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 12.484s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [21, 28, 0.050875671818295665]
+DEBUG:root:Stopped clock, now with 12.733s left
+DEBUG:AI:Sending battle message 21->28
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 12.733s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [28, 18, 0.06357415950476542]
+DEBUG:root:Stopped clock, now with 12.982s left
+DEBUG:AI:Sending battle message 28->18
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 12.982s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [8, 5, 0.07287886793072884]
+DEBUG:root:Stopped clock, now with 13.231s left
+DEBUG:AI:Sending battle message 8->5
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 13.231s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [18, 17, 0.07651824580799449]
+DEBUG:root:Stopped clock, now with 13.480s left
+DEBUG:AI:Sending battle message 18->17
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 13.480s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [29, 12, 0.1189067755421096]
+DEBUG:root:Stopped clock, now with 13.730s left
+DEBUG:AI:Sending battle message 29->12
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 13.730s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [12, 10, 0.1601157188695308]
+DEBUG:root:Stopped clock, now with 13.979s left
+DEBUG:AI:Sending battle message 12->10
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 13.979s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Don't want to attack anymore.
+DEBUG:root:Stopped clock, now with 14.228s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 14.228s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [7, 6, 0.10831229234165507]
+DEBUG:root:Stopped clock, now with 14.477s left
+DEBUG:AI:Sending battle message 7->6
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 14.477s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [11, 15, 0.07931770380465242]
+DEBUG:root:Stopped clock, now with 14.726s left
+DEBUG:AI:Sending battle message 11->15
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 14.726s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [18, 17, 0.08535489564828946]
+DEBUG:root:Stopped clock, now with 14.975s left
+DEBUG:AI:Sending battle message 18->17
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 14.975s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [16, 10, 0.11847989693794059]
+DEBUG:root:Stopped clock, now with 15.223s left
+DEBUG:AI:Sending battle message 16->10
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 15.223s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [17, 14, 0.13976301314288664]
+DEBUG:root:Stopped clock, now with 15.473s left
+DEBUG:AI:Sending battle message 17->14
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 15.473s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [28, 22, 0.14805516917269657]
+DEBUG:root:Stopped clock, now with 15.722s left
+DEBUG:AI:Sending battle message 28->22
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 15.722s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Don't want to attack anymore.
+DEBUG:root:Stopped clock, now with 15.971s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 15.971s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [8, 5, 0.103549714613695]
+DEBUG:root:Stopped clock, now with 16.220s left
+DEBUG:AI:Sending battle message 8->5
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 16.220s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [17, 26, 0.08430457545592418]
+DEBUG:root:Stopped clock, now with 16.469s left
+DEBUG:AI:Sending battle message 17->26
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 16.469s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [16, 23, 0.09219918241733582]
+DEBUG:root:Stopped clock, now with 16.717s left
+DEBUG:AI:Sending battle message 16->23
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 16.717s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [5, 4, 0.09105221047525802]
+DEBUG:root:Stopped clock, now with 16.966s left
+DEBUG:AI:Sending battle message 5->4
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 16.966s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [4, 6, 0.13264798449199722]
+DEBUG:root:Stopped clock, now with 17.215s left
+DEBUG:AI:Sending battle message 4->6
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 17.215s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [23, 19, 0.09977172893350739]
+DEBUG:root:Stopped clock, now with 17.464s left
+DEBUG:AI:Sending battle message 23->19
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 17.464s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Don't want to attack anymore.
+DEBUG:root:Stopped clock, now with 17.713s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 17.713s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [17, 26, 0.07590433052356094]
+DEBUG:root:Stopped clock, now with 17.961s left
+DEBUG:AI:Sending battle message 17->26
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 17.961s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [26, 20, 0.08005559362272541]
+DEBUG:root:Stopped clock, now with 18.210s left
+DEBUG:AI:Sending battle message 26->20
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 18.210s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [11, 9, 0.08438846504851005]
+DEBUG:root:Stopped clock, now with 18.458s left
+DEBUG:AI:Sending battle message 11->9
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 18.458s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [4, 2, 0.09058751263167508]
+DEBUG:root:Stopped clock, now with 18.707s left
+DEBUG:AI:Sending battle message 4->2
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 18.707s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [20, 7, 0.09148863799095386]
+DEBUG:root:Stopped clock, now with 18.955s left
+DEBUG:AI:Sending battle message 20->7
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 18.955s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Don't want to attack anymore.
+DEBUG:root:Stopped clock, now with 19.204s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 19.204s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [23, 10, 0.07706967225032546]
+DEBUG:root:Stopped clock, now with 19.450s left
+DEBUG:AI:Sending battle message 23->10
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 19.450s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [10, 13, 0.08016333553543653]
+DEBUG:root:Stopped clock, now with 19.699s left
+DEBUG:AI:Sending battle message 10->13
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 19.699s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [20, 29, 0.06733381043008757]
+DEBUG:root:Stopped clock, now with 19.947s left
+DEBUG:AI:Sending battle message 20->29
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 19.947s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [29, 12, 0.06020184134665474]
+DEBUG:root:Stopped clock, now with 20.196s left
+DEBUG:AI:Sending battle message 29->12
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 20.196s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [12, 19, 0.05809425717335426]
+DEBUG:root:Stopped clock, now with 20.444s left
+DEBUG:AI:Sending battle message 12->19
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 20.444s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [5, 14, 0.058458160620468824]
+DEBUG:root:Stopped clock, now with 20.693s left
+DEBUG:AI:Sending battle message 5->14
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 20.693s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Don't want to attack anymore.
+DEBUG:root:Stopped clock, now with 20.942s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 20.942s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [10, 13, 0.0909379806660997]
+DEBUG:root:Stopped clock, now with 21.190s left
+DEBUG:AI:Sending battle message 10->13
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 21.190s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [13, 1, 0.07853509457596397]
+DEBUG:root:Stopped clock, now with 21.438s left
+DEBUG:AI:Sending battle message 13->1
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 21.438s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [4, 6, 0.08168990125321485]
+DEBUG:root:Stopped clock, now with 21.687s left
+DEBUG:AI:Sending battle message 4->6
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 21.687s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [7, 6, 0.08293388658799072]
+DEBUG:root:Stopped clock, now with 21.935s left
+DEBUG:AI:Sending battle message 7->6
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 21.935s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [18, 17, 0.09117435068341484]
+DEBUG:root:Stopped clock, now with 22.184s left
+DEBUG:AI:Sending battle message 18->17
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 22.184s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [28, 22, 0.09667815048766704]
+DEBUG:root:Stopped clock, now with 22.433s left
+DEBUG:AI:Sending battle message 28->22
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 22.433s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Don't want to attack anymore.
+DEBUG:root:Stopped clock, now with 22.682s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 22.682s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [17, 26, 0.0649943343223196]
+DEBUG:root:Stopped clock, now with 22.930s left
+DEBUG:AI:Sending battle message 17->26
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 22.930s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [10, 23, 0.06525372788443495]
+DEBUG:root:Stopped clock, now with 23.177s left
+DEBUG:AI:Sending battle message 10->23
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 23.177s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [26, 27, 0.08673488919758832]
+DEBUG:root:Stopped clock, now with 23.424s left
+DEBUG:AI:Sending battle message 26->27
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 23.424s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [12, 19, 0.08629582551481718]
+DEBUG:root:Stopped clock, now with 23.672s left
+DEBUG:AI:Sending battle message 12->19
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 23.672s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [19, 24, 0.11317889623303468]
+DEBUG:root:Stopped clock, now with 23.920s left
+DEBUG:AI:Sending battle message 19->24
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 23.920s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [11, 28, 0.05394976357023018]
+DEBUG:root:Stopped clock, now with 24.168s left
+DEBUG:AI:Sending battle message 11->28
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 24.168s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [28, 22, 0.05160762653774764]
+DEBUG:root:Stopped clock, now with 24.416s left
+DEBUG:AI:Sending battle message 28->22
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 24.416s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [1, 2, 0.05173910624647471]
+DEBUG:root:Stopped clock, now with 24.664s left
+DEBUG:AI:Sending battle message 1->2
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 24.664s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [2, 4, 0.05540276348738238]
+DEBUG:root:Stopped clock, now with 24.912s left
+DEBUG:AI:Sending battle message 2->4
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 24.912s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [29, 20, 0.10034701749167985]
+DEBUG:root:Stopped clock, now with 25.160s left
+DEBUG:AI:Sending battle message 29->20
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 25.160s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Don't want to attack anymore.
+DEBUG:root:Stopped clock, now with 25.409s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 25.409s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [9, 8, 0.07637691963363968]
+DEBUG:root:Stopped clock, now with 25.656s left
+DEBUG:AI:Sending battle message 9->8
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 25.656s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [7, 20, 0.07939883814849114]
+DEBUG:root:Stopped clock, now with 25.904s left
+DEBUG:AI:Sending battle message 7->20
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 25.904s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [18, 22, 0.08130769505615865]
+DEBUG:root:Stopped clock, now with 26.152s left
+DEBUG:AI:Sending battle message 18->22
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 26.152s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [16, 3, 0.0822896886704294]
+DEBUG:root:Stopped clock, now with 26.399s left
+DEBUG:AI:Sending battle message 16->3
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 26.399s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [3, 13, 0.09016398791947866]
+DEBUG:root:Stopped clock, now with 26.648s left
+DEBUG:AI:Sending battle message 3->13
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 26.648s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [1, 13, 0.08615355637319544]
+DEBUG:root:Stopped clock, now with 26.896s left
+DEBUG:AI:Sending battle message 1->13
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 26.896s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [17, 14, 0.08422706277841607]
+DEBUG:root:Stopped clock, now with 27.145s left
+DEBUG:AI:Sending battle message 17->14
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 27.145s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Don't want to attack anymore.
+DEBUG:root:Stopped clock, now with 27.394s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type end_turn.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type battle.
+DEBUG:AI:Received message type end_turn.
+DEBUG:root:Starting clock with 27.394s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [15, 28, 0.09347414371301377]
+DEBUG:root:Stopped clock, now with 27.643s left
+DEBUG:AI:Sending battle message 15->28
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 27.643s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [28, 22, 0.09360967368333983]
+DEBUG:root:Stopped clock, now with 27.891s left
+DEBUG:AI:Sending battle message 28->22
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 27.891s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [1, 13, 0.11176140232448573]
+DEBUG:root:Stopped clock, now with 28.140s left
+DEBUG:AI:Sending battle message 1->13
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 28.140s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Possible turn: [22, 25, 0.16878565660584144]
+DEBUG:root:Stopped clock, now with 28.389s left
+DEBUG:AI:Sending battle message 22->25
+DEBUG:AI:Received message type battle.
+DEBUG:root:Starting clock with 28.389s left
+DEBUG:AI:Looking for possible turns.
+DEBUG:AI:Don't want to attack anymore.
+DEBUG:root:Stopped clock, now with 28.638s left
+DEBUG:AI:Sending end_turn message.
+DEBUG:AI:Received message type game_end.
+INFO:AI:Player 1 has won
